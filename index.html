@@ -19,10 +19,10 @@
     --grey-1:#f0f0ee;         /* 浅灰底 */
     --grey-2:#d4d4d2;         /* 中灰(分割线) */
     --grey-3:#737373;         /* 暗灰(辅助文字) */
-    --accent:#002FA7;         /* 高亮色: 克莱因蓝 IKB */
-    --accent-rgb:0,47,167;
+    --accent:#FF4800;         /* 高亮色: 克莱因蓝 IKB */
+    --accent-rgb:255,72,0;
     --accent-on:#ffffff;      /* accent 上的反色文字 */
-    --accent-bright:#5B7BFF;  /* 暗底高亮: IKB 提亮版 */
+    --accent-bright:#FF8A5C;  /* 暗底高亮: IKB 提亮版 */
 
     /* ============ Carbon 文本角色 token (role-based,代替 opacity) ============
        亮底:  primary 主文 / secondary 次文 / helper 辅助 / placeholder 占位
@@ -1181,6 +1181,21 @@
     .grid-12{grid-template-columns:repeat(6,1fr)}
   }
 </style>
+<style>
+  :root{
+    --accent:#FF4800;
+    --accent-rgb:255,72,0;
+    --accent-on:#ffffff;
+    --accent-bright:#FF8A5C;
+  }
+  .slide.accent .canvas-card{background:var(--accent)}
+  .slide.accent{background:var(--accent)}
+  /* 正文放大:标题不动,其余文字整体上调一档 */
+  .t-meta{font-size:max(15px,.92vw)!important}
+  .t-body-sm{font-size:max(16px,1vw)!important;line-height:1.62!important}
+  .t-body{font-size:max(18px,1.08vw)!important}
+  .t-cat{font-size:15px!important}
+</style>
 </head>
 <body class="canvas-mode">
 <script>
@@ -1230,10 +1245,10 @@
 <section class="slide accent" data-layout="SWISS-COVER-ASCII" data-animate="hero">
   <div class="canvas-card">
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · COVER</div><div class="r">SS · 26.11 · 01 / 27</div></div>
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · COVER</div><div class="r">SS · 26.11.24 · 01 / 16</div></div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.6vh">
       <div data-anim="kicker" class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em">QUALITY ASSURANCE · HOME APPLIANCE</div>
-      <h1 data-anim="title" style="align-self:center;font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(9.6vw,16vh);line-height:.96;letter-spacing:-.025em;color:#fff">2026<span style="font-style:italic;font-weight:300">试用期</span>述职</h1>
+      <h1 data-anim="title" style="align-self:center;font-family:var(--sans-zh),var(--sans);font-weight:300;font-size:min(9.6vw,16vh);line-height:.96;letter-spacing:-.01em;color:#fff;font-style:normal">2026 试用期述职</h1>
       <div data-anim="bottom" style="border-top:1px solid rgba(255,255,255,.22);padding-top:2vh;display:flex;justify-content:space-between;align-items:end">
         <div class="t-meta" style="color:rgba(255,255,255,.72);font-size:max(16px,1.1vw)">汇报人:Lain(周远)</div>
         <div class="t-meta" style="color:rgba(255,255,255,.6)">→ 方向键翻页</div>
@@ -1244,157 +1259,429 @@
 
 <section class="slide" data-layout="S01" data-animate="hero">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · CONTENTS</div><div class="r">SS · 26.11 · 02 / 27</div></div>
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · CONTENTS</div><div class="r">SS · 26.11 · 02 / 16</div></div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1vh">
+        <div style="width:64px;height:3px;background:var(--accent)"></div>
         <div class="t-meta">CONTENTS · 目录</div>
       </div>
-      <div style="display:flex;flex-direction:column;justify-content:center"><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
-      <div style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,9.6vh);line-height:.9;color:var(--accent)">01</div>
-      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.6vw,6.4vh);line-height:1;letter-spacing:-.02em">工作数据</div>
-      <div class="t-meta" style="color:var(--text-helper)">项目 · 用例 · 缺陷 · 报告总览</div>
-    </div><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
-      <div style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,9.6vh);line-height:.9;color:var(--accent)">02</div>
-      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.6vw,6.4vh);line-height:1;letter-spacing:-.02em">工作内容</div>
-      <div class="t-meta" style="color:var(--text-helper)">六大板块 / 品类矩阵 / AI 与自动化 / 协作推进</div>
-    </div><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
-      <div style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,9.6vh);line-height:.9;color:var(--accent)">03</div>
-      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.6vw,6.4vh);line-height:1;letter-spacing:-.02em">工作亮点</div>
-      <div class="t-meta" style="color:var(--text-helper)">AI 与自动化 / 数据 / 模式 / 测试增长</div>
-    </div><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
-      <div style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,9.6vh);line-height:.9;color:var(--accent)">04</div>
-      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.6vw,6.4vh);line-height:1;letter-spacing:-.02em">工作反思与改进</div>
-      <div class="t-meta" style="color:var(--text-helper)">三层反思 / 个人四问 / 问题与解法 / 下阶段目标</div>
+      <div data-anim="up" style="min-height:0"><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:1.9vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.9;color:var(--accent)">01</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6vh);line-height:1;letter-spacing:-.02em">交付结果</div>
+      <div class="t-meta" style="color:var(--text-helper)">项目 · 用例 · 缺陷 · 报告</div>
+    </div><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:1.9vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.9;color:var(--accent)">02</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6vh);line-height:1;letter-spacing:-.02em">做了什么</div>
+      <div class="t-meta" style="color:var(--text-helper)">AI 用例生成 · 本职范围</div>
+    </div><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:1.9vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.9;color:var(--accent)">03</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6vh);line-height:1;letter-spacing:-.02em">成长与用法</div>
+      <div class="t-meta" style="color:var(--text-helper)">成长轨迹 · AI 进日常 · 工具</div>
+    </div><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:1.9vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.9;color:var(--accent)">04</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6vh);line-height:1;letter-spacing:-.02em">左移与沉淀</div>
+      <div class="t-meta" style="color:var(--text-helper)">测试左移 · 飞书缺陷跟踪</div>
+    </div><div class="cover-row" data-anim="line" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:baseline;padding:1.9vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.9;color:var(--accent)">05</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6vh);line-height:1;letter-spacing:-.02em">不足与下一步</div>
+      <div class="t-meta" style="color:var(--text-helper)">三条不足 · 元 skill · 下阶段目标</div>
     </div></div>
-      <div data-anim="line" class="t-meta" style="color:var(--text-helper)">136 DAYS · 23 PROJECTS · 5465 CASES</div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S09" data-animate="statement">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · CHAPTER</div><div class="r">SS · 26.11 · 03 / 27</div></div>
-    <span class="dot-mat" style="position:absolute;right:5vw;top:12vh;width:30vw;height:30vw;color:var(--ink)"></span>
-    <span class="ring-mat lg" style="position:absolute;left:5vw;bottom:10vh;width:16vw;height:16vw;color:var(--ink)"></span>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2vh;align-content:center">
-      <div data-anim="line" class="t-meta" style="letter-spacing:.22em">ONE / 01</div>
-      <h1 data-anim="line" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(8.4vw,14.5vh);line-height:.98;letter-spacing:-.03em">工作数据</h1>
-      <div data-anim="line" class="lead" style="max-width:52ch;opacity:.8">136 天的完整记录:项目、轮次、用例、缺陷 —— 每一项都有正式测试报告可查。</div>
+      <div class="t-meta" style="color:var(--text-helper)">2026.07 起 · 质量保障 · 家电测试</div>
     </div>
   </div>
 </section>
 
 <section class="slide" data-layout="S10" data-animate="measure-up">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · DATA OVERVIEW</div><div class="r">SS · 26.11 · 04 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.2vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">01 · 工作数据 / MONTHLY DATA</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">试用期数据总览(2026.07 起)</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:8fr 4fr;gap:2.4vw;min-height:0">
-        <div style="display:grid;grid-template-rows:repeat(4,1fr);gap:1.6vh;min-height:0;padding:1vh 0">
-          <div style="display:flex;flex-direction:column;gap:.5vh;flex:1;min-width:0;border-top:1px solid var(--border-subtle);padding-top:.9vh">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · DELIVERY</div><div class="r">SS · 26.11 · 03 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:1.8vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">01 · 交付结果 / DELIVERY</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">四个月交付结果(2026.07—10)</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:8.6fr 3.4fr;gap:2.2vw;min-height:0">
+        <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1.6vh 1.6vw;min-height:0">
+          <div style="display:flex;flex-direction:column;gap:.35vh;min-width:0;min-height:0;border-top:1px solid var(--border-subtle);padding-top:.7vh">
       <div style="display:flex;justify-content:space-between;align-items:baseline">
-        <div class="t-meta" style="color:var(--accent)">测试轮次</div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.2vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">26<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">轮</span></div>
+        <div class="t-meta" style="color:var(--accent);font-size:max(13px,.8vw)">用例执行</div>
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.2vw,3.6vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">5412<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">条</span></div>
       </div>
-      <div style="flex:1;min-height:0"><svg viewBox="-2 -6 174 68" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet"><line x1="0" y1="58" x2="170" y2="58" stroke="#D8D8D4" stroke-width="0.8"/><rect x="0" y="26.0" width="26" height="32.0" fill="#002FA7"/><text x="13.0" y="24.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">6</text><text x="13.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">7月</text><rect x="36" y="26.0" width="26" height="32.0" fill="#002FA7"/><text x="49.0" y="24.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">6</text><text x="49.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">8月</text><rect x="72" y="10.0" width="26" height="48.0" fill="#002FA7"/><text x="85.0" y="8.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">9</text><text x="85.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">9月</text><rect x="108" y="36.7" width="26" height="21.3" fill="#002FA7"/><text x="121.0" y="35.1" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">4</text><text x="121.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">10月</text><rect x="144" y="52.7" width="26" height="5.3" fill="#002FA7"/><text x="157.0" y="51.1" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">1</text><text x="157.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">11月</text></svg></div>
-      <div class="t-body-sm" style="font-size:max(12px,.7vw);color:var(--text-secondary)">峰值 9 月 9 轮</div>
-    </div><div style="display:flex;flex-direction:column;gap:.5vh;flex:1;min-width:0;border-top:1px solid var(--border-subtle);padding-top:.9vh">
+      <div style="flex:1;min-height:0;display:flex;align-items:stretch;border-bottom:1px solid #D8D8D4;padding:0 .2vw"><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(58% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">2571</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:58%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">7月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(28% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">1223</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:28%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">8月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(22% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">976</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:22%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">9月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(14% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">642</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:14%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">10月</span>
+        </div></div></div>
+      <div class="t-body-sm" style="font-size:max(11px,.66vw);color:var(--text-secondary);line-height:1.35">7 月峰值 2571 条(D12+T1 大回归)</div>
+    </div><div style="display:flex;flex-direction:column;gap:.35vh;min-width:0;min-height:0;border-top:1px solid var(--border-subtle);padding-top:.7vh">
       <div style="display:flex;justify-content:space-between;align-items:baseline">
-        <div class="t-meta" style="color:var(--accent)">用例执行</div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.2vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">5465<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">条</span></div>
+        <div class="t-meta" style="color:var(--accent);font-size:max(13px,.8vw)">AI 编写用例</div>
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.2vw,3.6vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">590<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">条</span></div>
       </div>
-      <div style="flex:1;min-height:0"><svg viewBox="-2 -6 174 68" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet"><line x1="0" y1="58" x2="170" y2="58" stroke="#D8D8D4" stroke-width="0.8"/><rect x="0" y="10.0" width="26" height="48.0" fill="#002FA7"/><text x="13.0" y="8.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">2571</text><text x="13.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">7月</text><rect x="36" y="35.2" width="26" height="22.8" fill="#002FA7"/><text x="49.0" y="33.6" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">1223</text><text x="49.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">8月</text><rect x="72" y="39.8" width="26" height="18.2" fill="#002FA7"/><text x="85.0" y="38.2" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">976</text><text x="85.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">9月</text><rect x="108" y="46.0" width="26" height="12.0" fill="#002FA7"/><text x="121.0" y="44.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">642</text><text x="121.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">10月</text><rect x="144" y="56.8" width="26" height="1.2" fill="#002FA7"/><text x="157.0" y="55.2" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">53</text><text x="157.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">11月</text></svg></div>
-      <div class="t-body-sm" style="font-size:max(12px,.7vw);color:var(--text-secondary)">7 月峰值 2571 条(D12+T1 大回归)</div>
-    </div><div style="display:flex;flex-direction:column;gap:.5vh;flex:1;min-width:0;border-top:1px solid var(--border-subtle);padding-top:.9vh">
+      <div style="flex:1;min-height:0;display:flex;align-items:stretch;border-bottom:1px solid #D8D8D4;padding:0 .2vw"><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(2% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#A0A09C;font-family:var(--sans);line-height:1;white-space:nowrap">0</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:2%;background:#D8D8D4"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">7月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(61% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">381</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:61%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">8月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(2% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#A0A09C;font-family:var(--sans);line-height:1;white-space:nowrap">0</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:2%;background:#D8D8D4"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">9月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(34% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">209</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:34%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">10月</span>
+        </div></div></div>
+      <div class="t-body-sm" style="font-size:max(11px,.66vw);color:var(--text-secondary);line-height:1.35;white-space:nowrap;overflow:visible">8/10 月 381 · 209;6 个项目共 733;100% AI 生成</div>
+    </div><div style="display:flex;flex-direction:column;gap:.35vh;min-width:0;min-height:0;border-top:1px solid var(--border-subtle);padding-top:.7vh">
       <div style="display:flex;justify-content:space-between;align-items:baseline">
-        <div class="t-meta" style="color:var(--accent)">阻塞场景</div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.2vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">817<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">条</span></div>
+        <div class="t-meta" style="color:var(--accent);font-size:max(13px,.8vw)">新增缺陷</div>
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.2vw,3.6vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">33<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">个</span></div>
       </div>
-      <div style="flex:1;min-height:0"><svg viewBox="-2 -6 174 68" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet"><line x1="0" y1="58" x2="170" y2="58" stroke="#D8D8D4" stroke-width="0.8"/><rect x="0" y="10.0" width="26" height="48.0" fill="#002FA7"/><text x="13.0" y="8.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">410</text><text x="13.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">7月</text><rect x="36" y="16.1" width="26" height="41.9" fill="#002FA7"/><text x="49.0" y="14.5" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">358</text><text x="49.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">8月</text><rect x="72" y="54.7" width="26" height="3.3" fill="#002FA7"/><text x="85.0" y="53.1" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">28</text><text x="85.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">9月</text><rect x="108" y="55.7" width="26" height="2.3" fill="#002FA7"/><text x="121.0" y="54.1" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">20</text><text x="121.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">10月</text><rect x="144" y="56.8" width="26" height="1.2" fill="#002FA7"/><text x="157.0" y="55.2" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">1</text><text x="157.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">11月</text></svg></div>
-      <div class="t-body-sm" style="font-size:max(12px,.7vw);color:var(--text-secondary)">环境问题解决后 9 月起收敛</div>
-    </div><div style="display:flex;flex-direction:column;gap:.5vh;flex:1;min-width:0;border-top:1px solid var(--border-subtle);padding-top:.9vh">
+      <div style="flex:1;min-height:0;display:flex;align-items:stretch;border-bottom:1px solid #D8D8D4;padding:0 .2vw"><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(18% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">5</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:18%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">7月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(58% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">16</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:58%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">8月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(22% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">6</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:22%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">9月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(22% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">6</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:22%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">10月</span>
+        </div></div></div>
+      <div class="t-body-sm" style="font-size:max(11px,.66vw);color:var(--text-secondary);line-height:1.35">全部处理关闭 · 10 月按缺陷记录表补录 6 条</div>
+    </div><div style="display:flex;flex-direction:column;gap:.35vh;min-width:0;min-height:0;border-top:1px solid var(--border-subtle);padding-top:.7vh">
       <div style="display:flex;justify-content:space-between;align-items:baseline">
-        <div class="t-meta" style="color:var(--accent)">新增缺陷</div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.2vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">27<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">个</span></div>
+        <div class="t-meta" style="color:var(--accent);font-size:max(13px,.8vw)">测试轮次</div>
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.2vw,3.6vh);line-height:.95;letter-spacing:-.02em;font-feature-settings:'tnum'">25<span style="font-size:.5em;font-weight:300;opacity:.55;margin-left:.08em">轮</span></div>
       </div>
-      <div style="flex:1;min-height:0"><svg viewBox="-2 -6 174 68" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet"><line x1="0" y1="58" x2="170" y2="58" stroke="#D8D8D4" stroke-width="0.8"/><rect x="0" y="43.0" width="26" height="15.0" fill="#002FA7"/><text x="13.0" y="41.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">5</text><text x="13.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">7月</text><rect x="36" y="10.0" width="26" height="48.0" fill="#002FA7"/><text x="49.0" y="8.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">16</text><text x="49.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">8月</text><rect x="72" y="40.0" width="26" height="18.0" fill="#002FA7"/><text x="85.0" y="38.4" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18">6</text><text x="85.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">9月</text><rect x="108" y="56.8" width="26" height="1.2" fill="#002FA7"/><text x="121.0" y="55.2" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18"></text><text x="121.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">10月</text><rect x="144" y="56.8" width="26" height="1.2" fill="#002FA7"/><text x="157.0" y="55.2" text-anchor="middle" font-size="7" font-family="Helvetica,Arial,sans-serif" font-weight="500" fill="#1A1A18"></text><text x="157.0" y="66" text-anchor="middle" font-size="6.2" font-family="Helvetica,Arial,sans-serif" fill="#8A8A86">11月</text></svg></div>
-      <div class="t-body-sm" style="font-size:max(12px,.7vw);color:var(--text-secondary)">全部关闭 · 8 月最高 16 个</div>
+      <div style="flex:1;min-height:0;display:flex;align-items:stretch;border-bottom:1px solid #D8D8D4;padding:0 .2vw"><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(39% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">6</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:39%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">7月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(39% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">6</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:39%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">8月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(58% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">9</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:58%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">9月</span>
+        </div></div><div style="flex:1;min-width:0"><div style="position:relative;height:100%">
+          <span style="position:absolute;left:0;right:0;bottom:calc(26% + 1.9vh);text-align:center;font-size:max(11px,.7vw);font-weight:600;color:#1A1A18;font-family:var(--sans);line-height:1;white-space:nowrap">4</span>
+          <div style="position:absolute;left:15%;right:15%;bottom:1.4vh;height:26%;background:#FF4800"></div>
+          <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:max(11px,.7vw);color:#6E6E6A;line-height:1">10月</span>
+        </div></div></div>
+      <div class="t-body-sm" style="font-size:max(11px,.66vw);color:var(--text-secondary);line-height:1.35">峰值 9 月 9 轮</div>
     </div>
         </div>
-        <div style="display:flex;flex-direction:column;justify-content:space-between;border-left:1px solid var(--border-subtle);padding-left:2vw">
-          <div style="display:flex;flex-direction:column;gap:.8vh">
+        <div style="display:flex;flex-direction:column;justify-content:space-around;border-left:1px solid var(--border-subtle);padding-left:1.8vw">
+          <div style="display:flex;flex-direction:column;gap:.6vh">
             <div class="t-meta">项目</div>
-            <div style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,9.6vh);line-height:.92;letter-spacing:-.04em;font-feature-settings:'tnum'">23<span style="font-size:.3em;font-weight:300;opacity:.55;vertical-align:.5em">个</span></div>
-            <div class="t-body-sm" style="font-size:max(13px,.75vw)">19 交付 + 4 在途</div>
+            <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.92;letter-spacing:-.04em;font-feature-settings:'tnum'">31<span style="font-size:.3em;font-weight:300;opacity:.55;vertical-align:.5em">个</span></div>
+            <div class="t-body-sm" style="font-size:max(12px,.72vw)">19 交付 + 12 项在手</div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:.8vh">
-            <div class="t-meta">通过率</div>
-            <div style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,9.6vh);line-height:.92;letter-spacing:-.04em;color:var(--accent);font-feature-settings:'tnum'">97<span style="font-size:.3em;font-weight:300;opacity:.55;vertical-align:.5em">%</span></div>
-            <div class="t-body-sm" style="font-size:max(13px,.75vw)">排除阻塞口径 · 含阻塞 82.5%</div>
+          <div style="display:flex;flex-direction:column;gap:.6vh">
+            <div class="t-meta">用例通过率</div>
+            <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.92;letter-spacing:-.04em;color:var(--accent);font-feature-settings:'tnum'">97<span style="font-size:.3em;font-weight:300;opacity:.55;vertical-align:.5em">%</span></div>
+            <div class="t-body-sm" style="font-size:max(12px,.72vw)">5412 条执行 · 4458 条通过</div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:.8vh">
+          <div style="display:flex;flex-direction:column;gap:.6vh">
             <div class="t-meta">报告 / 打回 · 延期</div>
-            <div style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,9.6vh);line-height:.92;letter-spacing:-.04em;font-feature-settings:'tnum'">26<span style="font-size:.32em;font-weight:300;opacity:.5;vertical-align:.5em">份</span> · 0<span style="font-size:.32em;font-weight:300;opacity:.5;vertical-align:.5em">次</span></div>
-            <div class="t-body-sm" style="font-size:max(13px,.75vw)">当轮归档 · 无延期</div>
+            <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.92;letter-spacing:-.04em;font-feature-settings:'tnum'">25<span style="font-size:.32em;font-weight:300;opacity:.5;vertical-align:.5em">份</span> · 0<span style="font-size:.32em;font-weight:300;opacity:.5;vertical-align:.5em">次</span></div>
+            <div class="t-body-sm" style="font-size:max(12px,.72vw)">当轮归档 · 无延期</div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S09" data-animate="statement">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · CHAPTER</div><div class="r">SS · 26.11 · 05 / 27</div></div>
-    <span class="dot-mat" style="position:absolute;right:5vw;top:12vh;width:30vw;height:30vw;color:var(--ink)"></span>
-    <span class="ring-mat lg" style="position:absolute;left:5vw;bottom:10vh;width:16vw;height:16vw;color:var(--ink)"></span>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2vh;align-content:center">
-      <div data-anim="line" class="t-meta" style="letter-spacing:.22em">TWO / 02</div>
-      <h1 data-anim="line" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(8.4vw,14.5vh);line-height:.98;letter-spacing:-.03em">工作内容</h1>
-      <div data-anim="line" class="lead" style="max-width:52ch;opacity:.8">六大板块的日常:家电主责 · 跨线协测 · AI 赋能 · 自动化 · 内部工作 · 协作推进。</div>
     </div>
   </div>
 </section>
 
 <section class="slide" data-layout="S19" data-animate="four-cards">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · WORK CONTENTS</div><div class="r">SS · 26.11 · 06 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:3vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-        <div style="width:64px;height:3px;background:var(--accent)"></div>
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">工作内容</div>
-        <div class="t-meta">02 · WORK CONTENTS · 六大板块</div>
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · WHAT I DID</div><div class="r">SS · 26.11 · 04 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.6vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">02 · 做了什么 / OVERVIEW</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">四个月主要做了三件事</div></div>
+      <div data-anim="up" style="display:grid;grid-template-rows:auto auto;gap:2vh;min-height:0;align-content:start">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.6vw">
+          <div style="display:flex;flex-direction:column;gap:1.2vh;padding:2.4vh 1.4vw;border-top:3px solid var(--accent);background:var(--grey-1)">
+            <div class="t-meta" style="color:var(--accent)">01 · AI 用例生成</div>
+            <div style="font-weight:400;font-size:max(18px,1.5vw);line-height:1.22">用例 100% AI 生成</div>
+            <p class="t-body-sm" style="line-height:1.55;font-size:max(13px,.8vw)">为了贴合自己的业务线写了 req-to-cases skill;配串口工具、dsh 插件。编写环节从逐条手写变成生成加核对。</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1.2vh;padding:2.4vh 1.4vw;border-top:3px solid var(--accent);background:var(--grey-1)">
+            <div class="t-meta" style="color:var(--accent)">02 · 本职测试</div>
+            <div style="font-weight:400;font-size:max(18px,1.5vw);line-height:1.22">19 个项目,四品类</div>
+            <p class="t-body-sm" style="line-height:1.55;font-size:max(13px,.8vw)">大家电、小家电、厨房电器、运动健康,从用例设计、执行到报告输出独立负责;另有跨线支援。</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1.2vh;padding:2.4vh 1.4vw;border-top:3px solid var(--accent);background:var(--grey-1)">
+            <div class="t-meta" style="color:var(--accent)">03 · 智能体测试</div>
+            <div style="font-weight:400;font-size:max(18px,1.5vw);line-height:1.22">AI 功能的质量保障</div>
+            <p class="t-body-sm" style="line-height:1.55;font-size:max(13px,.8vw)">厨电智能体联动测试、AI 语料库建设、基于语料的推荐效果评测。智能体没有明确对错,靠评测口径和语料。</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vw;border-top:1px solid var(--border-subtle);padding-top:1.6vh">
+          <div style="display:flex;flex-direction:column;gap:.5vh">
+            <div class="t-meta">下阶段尝试</div>
+            <div class="t-body-sm" style="font-size:max(12px,.74vw);line-height:1.45">自动化配合:出可自动化的用例,断言与前置条件标清楚。</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.5vh">
+            <div class="t-meta">文档沉淀</div>
+            <div class="t-body-sm" style="font-size:max(12px,.74vw);line-height:1.45">飞书:缺陷记录跟踪表 + 测试要点与工具教程。</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.5vh">
+            <div class="t-meta">协作推动</div>
+            <div class="t-body-sm" style="font-size:max(12px,.74vw);line-height:1.45">需求变更必须同步测试，或者同步测试文档，必须严格让上游遵守。</div>
+          </div>
+        </div>
       </div>
-      <div data-anim="up" style="display:grid;grid-template-columns:repeat(6,1fr);gap:1vw;align-content:start">
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:2px solid var(--accent)">
-          <div class="t-meta" style="color:var(--accent)">01</div>
-          <div style="font-weight:400;font-size:max(15px,1.3vw);line-height:1.25">家电主责测试</div>
-          <p class="t-body-sm" style="line-height:1.5;font-size:max(13px,.8vw)">大家电 · 小家电 · 厨房电器 · 运动健康,19 个项目从用例到报告独立负责</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S12" data-animate="manifesto">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · AI CASES</div><div class="r">SS · 26.11 · 05 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.4vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">02 · 做了什么 / AI 用例生成</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">从"用工具"到"改工具"</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:5fr 7fr;gap:3vw;min-height:0;align-items:center">
+        <div style="display:flex;flex-direction:column;gap:1vh">
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(11vw,18vh);line-height:.88;letter-spacing:-.05em;color:var(--accent)">100<span style="font-size:.26em;font-weight:300;opacity:.55;vertical-align:.6em">%</span></div>
+          <div class="t-meta">用例由 AI 生成<br/>编写环节:逐条手写 → 生成 + 核对</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">02</div>
-          <div style="font-weight:400;font-size:max(15px,1.3vw);line-height:1.25">跨线协测</div>
-          <p class="t-body-sm" style="line-height:1.5;font-size:max(13px,.8vw)">手头有空时支援隔壁线:窗帘开关 · Matter 单火开关 · BLE BDU</p>
+        <div style="display:flex;flex-direction:column;gap:1.6vh">
+          <div style="border-top:2px solid var(--accent);padding-top:1.2vh">
+            <div class="t-meta" style="color:var(--accent)">出发点</div>
+            <p class="t-body-sm" style="line-height:1.55">每条业务线的用例各有自己的颗粒度习惯;为了让 AI 的产出贴合我自己这条线,我把生成方式按自己的需求重写了一遍。</p>
+          </div>
+          <div style="border-top:1px solid var(--border-subtle);padding-top:1.2vh">
+            <div class="t-meta">做法</div>
+            <p class="t-body-sm" style="line-height:1.55">写了一个适合自己的 skill(req-to-cases),按自己的需求组织用例结构,前后改了两版;配串口工具(多命令循环发送)、dsh 插件(会话上下文导出与历史问题导航)。</p>
+          </div>
+          <div style="border-top:1px solid var(--border-subtle);padding-top:1.2vh">
+            <div class="t-meta">结果</div>
+            <p class="t-body-sm" style="line-height:1.55">现在用例 100% 用 AI 生成,编写效率明显提升,生成的用例贴合自身业务线需求;xmind 转 json 导入用例库的流程也已跑通。</p>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">03</div>
-          <div style="font-weight:400;font-size:max(15px,1.3vw);line-height:1.25">AI 赋能</div>
-          <p class="t-body-sm" style="line-height:1.5;font-size:max(13px,.8vw)">req-to-cases skill · 串口工具 · dsh 插件 · AITextGen 用例生成</p>
+      </div>
+      <div data-anim="line" class="t-meta" style="color:var(--text-helper)">时间线:7 月 AITextGen 初尝试 → 8 月 skill 第一版 + 串口工具 → 9 月颗粒度对齐 + dsh 插件 → 10 月语料库与导入流程</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S15" data-animate="matrix-fill">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · SCOPE</div><div class="r">SS · 26.11 · 06 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.2vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">02 · 做了什么 / SCOPE</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">交付品类与在手任务(截至 11.18)</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:40fr 60fr;gap:2.4vw;min-height:0;overflow:hidden">
+        <div style="display:flex;flex-direction:column;gap:.5vh;overflow:hidden">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--accent);padding-top:1vh">
+            <div style="font-weight:500;font-size:max(16px,1.3vw)">已交付 · 四品类</div>
+            <div style="font-family:var(--sans);font-weight:200;font-size:min(2.2vw,3.8vh);color:var(--accent)">19<span style="font-size:.45em;opacity:.5">项</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:6em 1fr;gap:.8vw;padding:.75vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
+            <div style="font-weight:400;font-size:max(14px,.95vw)">大家电</div>
+            <div class="t-body-sm" style="font-size:max(13px,.78vw)">D12+T1 显控 · 洗衣机 · 干衣机 · 空调 · 除湿机 · 热泵 · 线控器</div>
+          </div>
+          <div style="display:grid;grid-template-columns:6em 1fr;gap:.8vw;padding:.75vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
+            <div style="font-weight:400;font-size:max(14px,.95vw)">小家电</div>
+            <div class="t-body-sm" style="font-size:max(13px,.78vw)">宠物看护 v1.2 · 宠物面板 · 猫砂盆 · 智能预览</div>
+          </div>
+          <div style="display:grid;grid-template-columns:6em 1fr;gap:.8vw;padding:.75vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
+            <div style="font-weight:400;font-size:max(14px,.95vw)">厨房电器</div>
+            <div class="t-body-sm" style="font-size:max(13px,.78vw)">云菜谱 3.0 · 咖啡机 · 空气炸锅 · 智能体联动</div>
+          </div>
+          <div style="display:grid;grid-template-columns:6em 1fr;gap:.8vw;padding:.75vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
+            <div style="font-weight:400;font-size:max(14px,.95vw)">运动健康</div>
+            <div class="t-body-sm" style="font-size:max(13px,.78vw)">体脂秤小程序</div>
+          </div>
+          <div style="display:grid;grid-template-columns:6em 1fr;gap:.8vw;padding:.75vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
+            <div style="font-weight:400;font-size:max(14px,.95vw)">跨线支援</div>
+            <div class="t-body-sm" style="font-size:max(13px,.78vw)">窗帘开关 · Matter 单火 · BLE BDU</div>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">04</div>
-          <div style="font-weight:400;font-size:max(15px,1.3vw);line-height:1.25">自动化</div>
-          <p class="t-body-sm" style="line-height:1.5;font-size:max(13px,.8vw)">D12+T1 自动化执行 · 自动化日志分析 · hex 发送网页(解决转码后不能下载日志)</p>
+        <div style="display:flex;flex-direction:column;gap:.5vh;overflow:hidden">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--accent);padding-top:1vh">
+            <div style="font-weight:500;font-size:max(16px,1.3vw)">在手任务</div>
+            <div style="font-family:var(--sans);font-weight:200;font-size:min(2.2vw,3.8vh);color:var(--accent)">12<span style="font-size:.45em;opacity:.5">项</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4vh 1.6vw;flex:1;min-height:0;align-content:start;padding-top:.4vh">
+            <div style="display:flex;flex-direction:column;gap:.4vh;min-width:0">
+              <div style="display:flex;align-items:baseline;gap:.5vw;border-top:2px solid var(--accent);padding-top:.7vh">
+                <span style="font-weight:500;font-size:max(14px,.92vw);color:var(--accent)">进行中</span>
+                <span class="t-meta" style="font-size:max(12px,.7vw)">7 项</span>
+              </div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 云食谱推荐优化 V1.0 — 测试中,卡提示词缺陷</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 空调公版面板 V3.1 — 11.23 完成</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 宠物云存储 — 用例待评审</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 宠物通用面板 — 技术评审待过</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· Googlefit 数据迁移 — 用例待出</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 4.3 寸空炸显控 — 遗留问题跟进</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 语料库搭建 — 空余时间</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:.4vh;min-width:0">
+              <div style="display:flex;align-items:baseline;gap:.5vw;border-top:1px solid var(--border-subtle);padding-top:.7vh">
+                <span style="font-weight:500;font-size:max(14px,.92vw)">未开始</span>
+                <span class="t-meta" style="font-size:max(12px,.7vw)">5 项</span>
+              </div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· D12+WBRU — 类比 D12+T1</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· yandex — 和云食谱高度绑定，待评审</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 人脸算法 — 待提测</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 智强 RAW 一拖多 DP — 用例待出</div>
+              <div class="t-body-sm" style="font-size:max(12.5px,.72vw);line-height:1.5">· 电热水器 — UI 评审未开始</div>
+            </div>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">05</div>
-          <div style="font-weight:400;font-size:max(15px,1.3vw);line-height:1.25">内部工作</div>
-          <p class="t-body-sm" style="line-height:1.5;font-size:max(13px,.8vw)">用例评审 · AI 语料库建设 · 紧急支援 · 经验文档整理</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S19" data-animate="four-cards">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · GROWTH</div><div class="r">SS · 26.11 · 07 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.6vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">03 · 成长与用法 / GROWTH</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">四个月,从接单到铺排</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.6vw;align-content:start"><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
+      <div class="t-meta" style="">7月</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(19px,1.7vw);line-height:1.2;letter-spacing:-.015em">被动接单</div>
+      <p class="t-body-sm" style="line-height:1.58">培训后接手 D12+T1 收尾、TCL、小天鹅等项目,按分配执行;AI 还停留在试用 AITextGen 的阶段。</p>
+    </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
+      <div class="t-meta" style="">8月</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(19px,1.7vw);line-height:1.2;letter-spacing:-.015em">独立主责</div>
+      <p class="t-body-sm" style="line-height:1.58">体脂秤、猫砂盆、Matter 开关全流程独立负责;开始用 AI 辅助写用例。</p>
+    </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
+      <div class="t-meta" style="">9月</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(19px,1.7vw);line-height:1.2;letter-spacing:-.015em">多线并行</div>
+      <p class="t-body-sm" style="line-height:1.58">热泵、宠物、咖啡机、厨电 4 个项目同时推进,多个项目提前完成;skill 颗粒度对齐完成。</p>
+    </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:3px solid var(--accent)">
+      <div class="t-meta" style="color:var(--accent)">10月</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(19px,1.7vw);line-height:1.2;letter-spacing:-.015em">前置铺排</div>
+      <p class="t-body-sm" style="line-height:1.58">并行项目周初先备好任务、环境、账号;用例 100% 由 AI 生成,编写不再逐条手敲。</p>
+    </div></div>
+    </div>
+    <div class="t-meta" style="color:var(--text-helper)">同一条线:手上项目从「别人分」到「自己排」,AI 从「试试看」到「默认用」。</div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S16" data-animate="field-notes">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · AI IN DAILY WORK</div><div class="r">SS · 26.11 · 08 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.2vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">03 · 成长与用法 / DAILY USE</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">AI 与自动化不是额外的事,是日常</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1.4vh 1.6vw;min-height:0">
+        <div style="display:flex;flex-direction:column;gap:.8vh;padding:2vh 1.3vw;border-top:2px solid var(--accent);background:var(--grey-1)">
+          <div class="t-meta" style="color:var(--accent)">01 · 写用例</div>
+          <div style="font-weight:400;font-size:max(16px,1.25vw);line-height:1.25">100% 由 AI 生成</div>
+          <div class="t-body-sm" style="line-height:1.55">自己写的 skill 按业务线需求组织结构;生成后我对照需求文档核对一遍,颗粒度自己控。</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">06</div>
-          <div style="font-weight:400;font-size:max(15px,1.3vw);line-height:1.25">协作推进</div>
-          <p class="t-body-sm" style="line-height:1.5;font-size:max(13px,.8vw)">需求变更同步机制:需求变动必须同步测试,已成惯例</p>
+        <div style="display:flex;flex-direction:column;gap:.8vh;padding:2vh 1.3vw;border-top:2px solid var(--accent);background:var(--grey-1)">
+          <div class="t-meta" style="color:var(--accent)">02 · 看日志</div>
+          <div style="font-weight:400;font-size:max(16px,1.25vw);line-height:1.25">不用人眼一条条翻</div>
+          <div class="t-body-sm" style="line-height:1.55">做了个能查自动化测试日志的网页:拉取到的日志可以直接摘出错误原因并筛选,异常的地方再深挖。</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.8vh;padding:2vh 1.3vw;border-top:2px solid var(--accent);background:var(--grey-1)">
+          <div class="t-meta" style="color:var(--accent)">03 · 排查问题</div>
+          <div style="font-weight:400;font-size:max(16px,1.25vw);line-height:1.25">串口日志下不下来,就写个页面</div>
+          <div class="t-body-sm" style="line-height:1.55">串口日志转码后下载不了,做了 hex 发送网页解决;测出问题定位到具体位置再给开发。</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.8vh;padding:2vh 1.3vw;border-top:2px solid var(--accent);background:var(--grey-1)">
+          <div class="t-meta" style="color:var(--accent)">04 · 学与分享</div>
+          <div style="font-weight:400;font-size:max(16px,1.25vw);line-height:1.25">自己配通,再写成教程</div>
+          <div class="t-body-sm" style="line-height:1.55">自己把 DSH、CC 走公司 AI 网关配通,写成 6 篇工具教程放飞书,同事照着就能用。</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-meta" style="color:var(--text-helper)">不是等需求,是自己先把它用起来 —— 用到顺手,再教给别人。</div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S13" data-animate="three-forces">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · TOOLING</div><div class="r">SS · 26.11 · 09 / 16</div></div>
+    <div style="flex:1;padding:0;display:flex;flex-direction:column;gap:2.4vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">03 · 成长与用法 / 工具</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">这四个月在用的五项</div></div>
+      <div data-anim="up" style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:3vw;min-height:0;align-content:start">
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:3px solid var(--accent);padding-top:1.1vh">
+            <div style="font-weight:500;font-size:max(19px,1.55vw)">AI 三项</div>
+            <div class="t-meta">AI</div>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:.6vw;align-items:baseline;padding:1.5vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-weight:500;font-size:max(17px,1.25vw);line-height:1.3">req-to-cases skill</div>
+      <div class="t-body-sm" style="font-size:max(14px,.88vw);line-height:1.55;color:var(--text-secondary)">用例 100% AI 生成</div>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:.6vw;align-items:baseline;padding:1.5vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-weight:500;font-size:max(17px,1.25vw);line-height:1.3">串口工具</div>
+      <div class="t-body-sm" style="font-size:max(14px,.88vw);line-height:1.55;color:var(--text-secondary)">多命令循环发送</div>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:.6vw;align-items:baseline;padding:1.5vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-weight:500;font-size:max(17px,1.25vw);line-height:1.3">dsh 插件</div>
+      <div class="t-body-sm" style="font-size:max(14px,.88vw);line-height:1.55;color:var(--text-secondary)">会话上下文导出、历史问题导航</div>
+    </div>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:3px solid var(--accent);padding-top:1.1vh">
+            <div style="font-weight:500;font-size:max(19px,1.55vw)">自动化两项</div>
+            <div class="t-meta">AUTOMATION</div>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:.6vw;align-items:baseline;padding:1.5vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-weight:500;font-size:max(17px,1.25vw);line-height:1.3">自动化测试日志分析网页</div>
+      <div class="t-body-sm" style="font-size:max(14px,.88vw);line-height:1.55;color:var(--text-secondary)">拉取到的日志直接摘出错误原因并筛选</div>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:.6vw;align-items:baseline;padding:1.5vh 0;border-top:1px solid var(--border-subtle)">
+      <div style="font-weight:500;font-size:max(17px,1.25vw);line-height:1.3">hex 发送网页</div>
+      <div class="t-body-sm" style="font-size:max(14px,.88vw);line-height:1.55;color:var(--text-secondary)">解决串口日志转码后无法下载</div>
+    </div>
+        </div>
+      </div>
+      <div class="t-body-sm" style="font-size:max(14px,.86vw);color:var(--text-secondary);border-top:1px solid var(--border-subtle);padding-top:1.2vh">
+        五项都是我自己做、自己每天在用的;用例编写、日志分析、问题排查三个环节已经不再靠手工。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S05" data-animate="stack-build">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · SHIFT LEFT</div><div class="r">SS · 26.11 · 10 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.2vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">04 · 左移与沉淀 / 测试左移</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">一件事:把问题往前挪</div></div>
+      <div style="display:grid;grid-template-rows:auto 1fr;gap:1.8vh;min-height:0">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2vw">
+          <div style="display:flex;flex-direction:column;gap:1vh;padding:2.2vh 1.5vw;border-top:3px solid var(--accent);background:var(--grey-1)">
+            <div class="t-meta" style="color:var(--accent)">01 · 需求模糊点,评审时就对齐</div>
+            <div style="font-weight:500;font-size:max(17px,1.45vw);line-height:1.3">不等测出来才发现</div>
+            <p class="t-body-sm" style="line-height:1.6">需求里说不清的地方——某个状态该不该有提示、异常场景怎么处理、多语言下文案怎么显示——我在用例评审时就逐条提出来,当场跟产品确认口径,写进用例。</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1vh;padding:2.2vh 1.5vw;background:var(--accent);color:var(--accent-on);border-top:3px solid var(--accent)">
+            <div class="t-meta" style="color:rgba(255,255,255,.85)">02 · 问题定位到点,再提给开发</div>
+            <div style="font-weight:500;font-size:max(17px,1.45vw);line-height:1.3">给的是位置,不是现象</div>
+            <p class="t-body-sm" style="line-height:1.6;color:rgba(255,255,255,.92)">测出问题不只报"这里不对",而是把范围缩到具体端和具体模块:是面板、云端还是 APP,是哪个状态、哪一步触发,附上日志和步骤;开发拿到就能直接查。</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1vh;border-top:1px solid var(--border-subtle);padding-top:1.6vh">
+          <div class="t-meta" style="color:var(--accent)">为什么值得做</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vw">
+            <div class="t-body-sm" style="line-height:1.55"><b>省返工</b>:口径在评审时定下来,后面不用边测边猜、测完再对。</div>
+            <div class="t-body-sm" style="line-height:1.55"><b>省开发时间</b>:定位到点,开发不用先从现象反推,来回问的轮次少了。</div>
+            <div class="t-body-sm" style="line-height:1.55"><b>留得下</b>:模糊点澄清一条记一条,下个版本直接查,不用重复讨论。</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1403,227 +1690,76 @@
 
 <section class="slide" data-layout="S15" data-animate="matrix-fill">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · TEST SCOPE</div><div class="r">SS · 26.11 · 07 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.6vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">02 · 工作内容 / TEST SCOPE</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">测试内容:品类细分</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:1fr 1fr;gap:3vw;min-height:0;overflow:hidden">
-        <div style="display:flex;flex-direction:column;gap:.6vh;border-top:2px solid var(--accent);padding-top:1.2vh">
-      <div style="display:flex;justify-content:space-between;align-items:baseline">
-        <div style="font-weight:500;font-size:max(17px,1.4vw)">家电主责 · 四品类</div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.4vh);color:var(--accent)">19<span style="font-size:.45em;opacity:.5">项</span></div>
-      </div>
-      <div style="display:grid;grid-template-columns:9em 1fr;gap:1.2vw;padding:.9vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-          <div style="font-weight:400;font-size:max(15px,1.05vw)">大家电</div>
-          <div class="t-body-sm" style="font-size:max(14px,.85vw)">洗衣机 · 干衣机 · 空调 · 除湿机 · 热泵 · 线控器</div>
-        </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.2vw;padding:.9vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-          <div style="font-weight:400;font-size:max(15px,1.05vw)">小家电</div>
-          <div class="t-body-sm" style="font-size:max(14px,.85vw)">宠物看护 v1.2 · 宠物面板 v1.0 · 猫砂盆 · 智能预览</div>
-        </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.2vw;padding:.9vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-          <div style="font-weight:400;font-size:max(15px,1.05vw)">厨房电器</div>
-          <div class="t-body-sm" style="font-size:max(14px,.85vw)">云菜谱 3.0 · 咖啡机 · 空气炸锅 · 智能体联动</div>
-        </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.2vw;padding:.9vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-          <div style="font-weight:400;font-size:max(15px,1.05vw)">运动健康</div>
-          <div class="t-body-sm" style="font-size:max(14px,.85vw)">体脂秤小程序</div>
-        </div>
-    </div><div style="display:flex;flex-direction:column;gap:.6vh;border-top:1px solid var(--border-subtle);padding-top:1.2vh">
-      <div style="display:flex;justify-content:space-between;align-items:baseline">
-        <div style="font-weight:500;font-size:max(17px,1.4vw)">跨线协测</div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.4vh);">3<span style="font-size:.45em;opacity:.5">项</span></div>
-      </div>
-      <div style="display:grid;grid-template-columns:9em 1fr;gap:1.2vw;padding:.9vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-          <div style="font-weight:400;font-size:max(15px,1.05vw)">电工照明</div>
-          <div class="t-body-sm" style="font-size:max(14px,.85vw)">WIFIBLE T1 窗帘开关 · Matter 单火开关</div>
-        </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.2vw;padding:.9vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-          <div style="font-weight:400;font-size:max(15px,1.05vw)">通用固件</div>
-          <div class="t-body-sm" style="font-size:max(14px,.85vw)">BLE 蓝牙单点 BDU</div>
-        </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.2vw;padding:.9vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-          <div style="font-weight:400;font-size:max(15px,1.05vw)">安全支援</div>
-          <div class="t-body-sm" style="font-size:max(14px,.85vw)">微信小程序安全问题修复(空闲支援)</div>
-        </div>
-    </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S11" data-animate="timeline-walk">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · GROWTH FLOW</div><div class="r">SS · 26.11 · 08 / 27</div></div>
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · FEISHU</div><div class="r">SS · 26.11 · 11 / 16</div></div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">02 · 工作内容 / GROWTH FLOW</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">家电测试发展流程:六阶段</div></div>
-      <div class="timeline-h"><div class="tl-row" style="grid-template-columns:repeat(6,1fr)"><div class="th-node up">
-      <span class="dot"></span>
-      <div class="label"><span class="yr">探索</span><span class="name">跟测学习</span><span class="desc" style="max-width:13vw">测试方法、面板流程 / ATESTBOT 初识</span></div>
-    </div><div class="th-node down">
-      <span class="dot"></span>
-      <div class="label"><span class="yr">模仿</span><span class="name">用例编写</span><span class="desc" style="max-width:13vw">D12+T1 用例、评审 / 小天鹅产测 OTA</span></div>
-    </div><div class="th-node up">
-      <span class="dot"></span>
-      <div class="label"><span class="yr">测试</span><span class="name">独立执行</span><span class="desc" style="max-width:13vw">TCL/窗帘开关全链路 / 基础验证</span></div>
-    </div><div class="th-node down">
-      <span class="dot"></span>
-      <div class="label"><span class="yr">提升</span><span class="name">多线并行</span><span class="desc" style="max-width:13vw">4 项目并行节奏 / 表格同步工作法</span></div>
-    </div><div class="th-node up">
-      <span class="dot"></span>
-      <div class="label"><span class="yr">输出</span><span class="name">前置铺排</span><span class="desc" style="max-width:13vw">周初铺自动化与环境 / 阻塞止损</span></div>
-    </div><div class="th-node accent down">
-      <span class="dot"></span>
-      <div class="label"><span class="yr">推进</span><span class="name">品类深耕</span><span class="desc" style="max-width:13vw">宠物+厨电聚焦 / 4 个在途用例设计</span></div>
-    </div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S10" data-animate="measure-up">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · AI MILESTONES</div><div class="r">SS · 26.11 · 09 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.4vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">02 · 工作内容 / AI ENABLEMENT</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">AI 赋能阶段成果</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:4fr 8fr;gap:3vw;min-height:0;align-items:start">
-        <div style="display:flex;flex-direction:column;gap:1.4vh;position:sticky">
-          <div style="font-family:var(--sans);font-weight:200;font-size:min(11vw,18vh);line-height:.9;letter-spacing:-.05em;color:var(--accent)">100<span style="font-size:.28em;font-weight:300;opacity:.55;vertical-align:.55em">%</span></div>
-          <div class="t-meta" style="color:var(--text-secondary)">阶段完成度<br/>AI 工具全部完成产出</div>
-          <div style="display:flex;gap:1vw">
-            <div style="flex:1;height:6px;background:var(--grey-1);position:relative"><div style="position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--accent)"></div></div>
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">04 · 左移与沉淀 / 飞书</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">飞书:缺陷留痕,问题好追溯</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:7fr 5fr;gap:2.4vw;min-height:0;overflow:hidden">
+        <div style="display:flex;flex-direction:column;gap:.3vh;overflow:hidden">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--accent);padding-top:1vh">
+            <div style="font-weight:500;font-size:max(16px,1.3vw)">缺陷记录跟踪表</div>
+            <div style="font-family:var(--sans);font-weight:200;font-size:min(2.2vw,3.8vh);color:var(--accent)">8<span style="font-size:.45em;opacity:.5">张</span></div>
           </div>
-          <div class="t-body-sm" style="font-size:max(13px,.75vw)">req-to-cases skill、串口工具、dsh 插件全部完成;xmind 转 json 导入流程已跑通,语料库已建</div>
-        </div>
-        <div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.4vw;padding:1.5vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-      <div class="t-meta" style="color:var(--accent);font-size:max(14px,.85vw)">7月 阶段成果</div>
-      <div class="t-body-sm" style="line-height:1.55">AITextGen 用例生成初尝试,从工具试用中熟悉 AI 用例生成的能力边界</div>
-    </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.4vw;padding:1.5vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-      <div class="t-meta" style="color:var(--accent);font-size:max(14px,.85vw)">8月 阶段成果</div>
-      <div class="t-body-sm" style="line-height:1.55">req-to-cases skill v1 编写,贴合自身需求文档解读;串口工具迭代:多命令打包循环发送</div>
-    </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.4vw;padding:1.5vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-      <div class="t-meta" style="color:var(--accent);font-size:max(14px,.85vw)">9月 阶段成果</div>
-      <div class="t-body-sm" style="line-height:1.55">skill 颗粒度对齐完成;dsh 插件完成迭代;AI 用例编写实践:需求文档覆盖较全面</div>
-    </div><div style="display:grid;grid-template-columns:9em 1fr;gap:1.4vw;padding:1.5vh 0;border-top:1px solid var(--border-subtle);align-items:baseline">
-      <div class="t-meta" style="color:var(--accent);font-size:max(14px,.85vw)">10月 阶段成果</div>
-      <div class="t-body-sm" style="line-height:1.55">AI 语料库建设;xmind 用例转 json 导入用例库的流程已跑通</div>
-    </div></div>
-      </div>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">01</span>
+      <span class="t-body-sm" style="line-height:1.45">体脂秤 RN转小程序 第一轮 缺陷记录跟踪</span>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">02</span>
+      <span class="t-body-sm" style="line-height:1.45">体脂秤 RN转小程序 第二轮 缺陷记录跟踪</span>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">03</span>
+      <span class="t-body-sm" style="line-height:1.45">奥克斯除湿机 固件 缺陷记录跟踪</span>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">04</span>
+      <span class="t-body-sm" style="line-height:1.45">宠物面板 v1.0 第一轮 缺陷记录跟踪</span>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">05</span>
+      <span class="t-body-sm" style="line-height:1.45">BDU 缺陷记录跟踪</span>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">06</span>
+      <span class="t-body-sm" style="line-height:1.45">线控器热泵面板 第一轮 缺陷记录跟踪</span>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">07</span>
+      <span class="t-body-sm" style="line-height:1.45">云食谱工具食谱推荐 V1.0 缺陷记录跟踪</span>
+    </div><div style="display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:baseline;padding:.85vh 0;border-top:1px solid var(--border-subtle)">
+      <span style="font-family:var(--mono);font-size:max(12px,.72vw);color:var(--accent)">08</span>
+      <span class="t-body-sm" style="line-height:1.45">空调面板 v3.1 缺陷记录跟踪</span>
     </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S16" data-animate="field-notes">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · INTERNAL WORK</div><div class="r">SS · 26.11 · 10 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.2vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">02 · 工作内容 / INTERNAL</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">内部工作</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:1.4vh 1.2vw;min-height:0"><div class="card-fill" style="padding:2vh 1.3vw;display:flex;flex-direction:column;gap:1vh;min-height:0">
-      <div class="t-meta" style="color:var(--accent)">语料与规范</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh">
-        <li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· AI 语料库建设完成</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· AITextGen 用例生成实践</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· AI 新导入规范推进</li>
-      </ul>
-    </div><div class="card-fill" style="padding:2vh 1.3vw;display:flex;flex-direction:column;gap:1vh;min-height:0">
-      <div class="t-meta" style="color:var(--accent)">支援</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh">
-        <li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 跨线协测:窗帘开关 / Matter / BDU</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 奥克斯重配重测推动</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 组内临时事务响应</li>
-      </ul>
-    </div><div class="card-fill" style="padding:2vh 1.3vw;display:flex;flex-direction:column;gap:1vh;min-height:0">
-      <div class="t-meta" style="color:var(--accent)">评审</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh">
-        <li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 用例评审:热泵2.0 · 宠物v1.2 · 云菜谱</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 需求阶段跟进产品口径,测试左移</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 评审问题当面澄清,减少来回</li>
-      </ul>
-    </div><div class="card-fill" style="padding:2vh 1.3vw;display:flex;flex-direction:column;gap:1vh;min-height:0">
-      <div class="t-meta" style="color:var(--accent)">其他</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh">
-        <li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 公司级 AI 相关活动参与</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 日常临时事项响应</li>
-      </ul>
-    </div><div class="card-fill" style="padding:2vh 1.3vw;display:flex;flex-direction:column;gap:1vh;min-height:0">
-      <div class="t-meta" style="color:var(--accent)">文档</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh">
-        <li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 飞书 WIKI 12 篇:项目细节 6 + 工具分享 6</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 项目细节:热泵2.0/宠物看护/宠物面板/线控器/空调面板/BDU</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 分享:dsh 会话导出插件/问题目录插件/网关配置×3</li>
-      </ul>
-    </div><div class="card-fill" style="padding:2vh 1.3vw;display:flex;flex-direction:column;gap:1vh;min-height:0">
-      <div class="t-meta" style="color:var(--accent)">记录</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh">
-        <li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 任务维度逐日记录,当周可回溯</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 测试问题与解决过程随手记</li><li class="t-body-sm" style="font-size:max(13px,.78vw);line-height:1.45">· 报告当轮归档,不补交</li>
-      </ul>
-    </div></div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S05" data-animate="stack-build">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · COLLABORATION</div><div class="r">SS · 26.11 · 11 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">02 · 工作内容 / PUSH FORWARD</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">协作推进:需求变更同步</div></div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vw;min-height:0;align-content:stretch">
-        <div style="display:flex;flex-direction:column;gap:1.6vh;padding:2.4vh 1.6vw;border:1px solid var(--border-subtle)">
-          <div class="t-meta" style="color:var(--accent)">背景 · 问题</div>
-          <div style="font-weight:500;font-size:max(17px,1.5vw);line-height:1.3">宠物面板:需求改了,<br/>测试不知道</div>
-          <p class="t-body-sm" style="line-height:1.6">产品侧调整了需求点,没有同步到测试;一轮执行下来,用例与实际需求出现大量出入,验证工作白做,工时浪费。</p>
-          <div class="t-meta" style="margin-top:auto;color:var(--text-helper)">2026.08 · 宠物面板 v1.0 一轮</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.6vh;padding:2.4vh 1.6vw;background:var(--ink);color:var(--paper)">
-          <div class="t-meta" style="color:var(--accent-bright, #4D7CFF)">做法 · 推动</div>
-          <div style="font-weight:500;font-size:max(17px,1.5vw);line-height:1.3">需求变动必须同步测试</div>
-          <p class="t-body-sm" style="line-height:1.6;color:rgba(255,255,255,.85)">向产品和项目侧明确提出:无论项目是否已提测,需求有任何变动,都要告知测试或更新同步文档;在组内沟通中反复确认这个口径,直到形成默认做法。</p>
-          <div class="t-meta" style="margin-top:auto;color:rgba(255,255,255,.55)">个人推动 · 已成惯例</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.6vh;padding:2.4vh 1.6vw;border:1px solid var(--border-subtle)">
-          <div class="t-meta" style="color:var(--accent)">效果 · 现状</div>
-          <div style="font-weight:500;font-size:max(17px,1.5vw);line-height:1.3">后续项目未再出现<br/>同类返工</div>
-          <p class="t-body-sm" style="line-height:1.6">宠物线后续轮次、热泵 2.0、咖啡机等项目的需求变动都提前知晓,测试计划能跟着调整;类似出入没有再发生过。</p>
-          <div class="t-meta" style="margin-top:auto;color:var(--text-helper)">2026.09 起 · 持续有效</div>
+        <div style="display:flex;flex-direction:column;gap:1.6vh;border-left:1px solid var(--border-subtle);padding-left:2vw">
+          <div>
+            <div class="t-meta" style="color:var(--accent)">怎么用</div>
+            <p class="t-body-sm" style="line-height:1.6;margin-top:.6vh">缺陷先同步给开发,由开发确认是 bug 还是其他原因;同步时一并附上 bug 单链接、复现步骤的图片或视频,留痕好追溯。</p>
+          </div>
+          <div style="border-top:1px solid var(--border-subtle);padding-top:1.4vh">
+            <div class="t-meta" style="color:var(--accent)">另外 12 篇测试要点与工具教程</div>
+            <p class="t-body-sm" style="line-height:1.6;margin-top:.6vh">6 篇项目测试要点:热泵 2.0、宠物外区账号、宠物面板、线控器 Base64 全表、空调面板、BDU。<br/>6 篇工具教程:两个 DSH 插件、AI 网关配置等。</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S09" data-animate="statement">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · CHAPTER</div><div class="r">SS · 26.11 · 12 / 27</div></div>
-    <span class="dot-mat" style="position:absolute;right:5vw;top:12vh;width:30vw;height:30vw;color:var(--ink)"></span>
-    <span class="ring-mat lg" style="position:absolute;left:5vw;bottom:10vh;width:16vw;height:16vw;color:var(--ink)"></span>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2vh;align-content:center">
-      <div data-anim="line" class="t-meta" style="letter-spacing:.22em">THREE / 03</div>
-      <h1 data-anim="line" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(8.4vw,14.5vh);line-height:.98;letter-spacing:-.03em">工作亮点</h1>
-      <div data-anim="line" class="lead" style="max-width:52ch;opacity:.8">工具产出 · 数据记录 · 模式演进 · 任务增长。</div>
-    </div>
-  </div>
-</section>
+  </section>
 
 <section class="slide" data-layout="S13" data-animate="three-forces">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · HIGHLIGHTS</div><div class="r">SS · 26.11 · 13 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.4vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">03 · 工作亮点 / OVERVIEW</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">亮点概述</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:4fr 12fr;gap:2vw;min-height:0">
-        <div style="background:var(--ink);color:var(--paper);padding:3vh 1.8vw;display:flex;flex-direction:column;justify-content:space-between">
-          <div class="t-cat on-dark">亮点概述</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6vh);line-height:1.1;letter-spacing:-.02em">四个方面</div>
-          <div class="t-meta" style="color:rgba(255,255,255,.62)">2026.07 — 11.12</div>
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · GAPS</div><div class="r">SS · 26.11 · 12 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.2vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">05 · 不足与下一步 / 不足</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">三条不足,不绕</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.8vw;min-height:0;align-content:start">
+        <div style="display:flex;flex-direction:column;gap:1.2vh;border-top:3px solid var(--accent);padding-top:1.6vh">
+          <div class="t-meta" style="color:var(--accent)">01</div>
+          <div style="font-weight:400;font-size:max(18px,1.6vw);line-height:1.25">自动化配合经验少</div>
+          <p class="t-body-sm" style="line-height:1.6">自动化由开发执行、测试侧出用例;可自动化的用例怎么写、断言和前置条件怎么标,我还没形成套路。</p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;justify-content:center"><article class="card-fill" style="padding:1.7vh 1.6vw;display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:start">
-      <div style="font-weight:500;font-size:max(17px,1.5vw);color:var(--accent);min-width:6em">AI 与自动化</div>
-      <div style="display:flex;flex-direction:column;gap:.4vh">
-        <div class="t-body-sm" style="line-height:1.5">工具从试用到自己写,两条线各有产出</div>
-        <div class="t-meta" style="font-size:max(12px,.68vw)">AI 3 项 · 自动化 2 项</div>
-      </div>
-    </article><article class="card-fill" style="padding:1.7vh 1.6vw;display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:start">
-      <div style="font-weight:500;font-size:max(17px,1.5vw);color:var(--accent);min-width:6em">数据</div>
-      <div style="display:flex;flex-direction:column;gap:.4vh">
-        <div class="t-body-sm" style="line-height:1.5">任务维度逐日记录,改进有据可查</div>
-        <div class="t-meta" style="font-size:max(12px,.68vw)">每单必有留痕</div>
-      </div>
-    </article><article class="card-fill" style="padding:1.7vh 1.6vw;display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:start">
-      <div style="font-weight:500;font-size:max(17px,1.5vw);color:var(--accent);min-width:6em">模式</div>
-      <div style="display:flex;flex-direction:column;gap:.4vh">
-        <div class="t-body-sm" style="line-height:1.5">从被动接单到前置铺排,四阶段演进</div>
-        <div class="t-meta" style="font-size:max(12px,.68vw)">详见后页</div>
-      </div>
-    </article><article class="card-fill" style="padding:1.7vh 1.6vw;display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:start">
-      <div style="font-weight:500;font-size:max(17px,1.5vw);color:var(--accent);min-width:6em">测试增长</div>
-      <div style="display:flex;flex-direction:column;gap:.4vh">
-        <div class="t-body-sm" style="line-height:1.5">任务量逐月爬坡,全周期无空白周</div>
-        <div class="t-meta" style="font-size:max(12px,.68vw)">月度曲线见后页</div>
-      </div>
-    </article></div>
+        <div style="display:flex;flex-direction:column;gap:1.2vh;border-top:3px solid var(--accent);padding-top:1.6vh">
+          <div class="t-meta" style="color:var(--accent)">02</div>
+          <div style="font-weight:400;font-size:max(18px,1.6vw);line-height:1.25">测试方法待沉淀</div>
+          <p class="t-body-sm" style="line-height:1.6">智能体和工具集这类新形态怎么测,目前多是现场摸索,没形成可复用的方法和检查项;这块我下一步想补上。</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.2vh;border-top:3px solid var(--accent);padding-top:1.6vh">
+          <div class="t-meta" style="color:var(--accent)">03</div>
+          <div style="font-weight:400;font-size:max(18px,1.6vw);line-height:1.25">能力面还窄</div>
+          <p class="t-body-sm" style="line-height:1.6">协议只碰过 WIFI、BLE、Matter,Zigbee 没接触;飞书上写的多是操作细节,方法论层面的输出不够。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1631,54 +1767,88 @@
 
 <section class="slide" data-layout="S12" data-animate="manifesto">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · AI JOURNEY</div><div class="r">SS · 26.11 · 14 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:1fr auto;gap:3vh;min-height:0">
-      <div data-anim="line" style="display:grid;grid-template-columns:1fr 1fr;gap:3vw;align-items:stretch;padding-top:1vh">
-        <div style="display:flex;flex-direction:column;gap:1.6vh;border-top:2px solid var(--accent);padding-top:1.6vh">
-          <div class="t-meta" style="color:var(--accent)">AI 线 · 3 项</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(19px,1.7vw);line-height:1.25">req-to-cases skill · 串口工具 · dsh 插件</div>
-          <p class="t-body-sm" style="line-height:1.65;max-width:38ch">用 AITextGen 生成用例,发现颗粒度对不上实际需求,8 月起自己编写 req-to-cases skill,前后改了两版,颗粒度问题已解决;串口工具做多命令循环发送;dsh 插件辅助日常日志分析,空余时间完成迭代。</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.6vh;border-top:1px solid var(--border-subtle);padding-top:1.6vh">
-          <div class="t-meta">自动化线 · 2 项(独立于 AI)</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(19px,1.7vw);line-height:1.25">自动化日志分析 · hex 发送网页</div>
-          <p class="t-body-sm" style="line-height:1.65;max-width:38ch">7 月在 D12+T1 上执行自动化,掌握树莓派烧录与任务配置;随后做了自动化日志分析;hex 发送网页解决了转码后不能下载日志的问题,线上回归时直接可用。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S07" data-animate="hero">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · AI DATA</div><div class="r">SS · 26.11 · 15 / 27</div></div>
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · META SKILL</div><div class="r">SS · 26.11 · 13 / 16</div></div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.4vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">03 · 亮点 / AI DATA</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">AI 赋能数据</div></div>
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">05 · 不足与下一步 / 元 skill</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">把"我自己的 skill"变成"每个人的 skill"</div></div>
       <div data-anim="up" style="display:grid;grid-template-columns:7fr 5fr;gap:3vw;min-height:0;align-items:center">
-        <div class="h-bar-chart" style="margin-top:0">
-          <div class="row-lbl">7月 · AI 0</div>
-    <div class="row-track"><div class="row-fill" style="width:0.0%"></div></div>
-    <div class="row-val">0<span class="unit"></span></div><div class="row-lbl">8月 · AI 2</div>
-    <div class="row-track"><div class="row-fill" style="width:66.66666666666666%"></div></div>
-    <div class="row-val">2<span class="unit">项</span></div><div class="row-lbl">9月 · AI 3</div>
-    <div class="row-track"><div class="row-fill accent" style="width:100.0%"></div></div>
-    <div class="row-val">3<span class="unit">项</span></div><div class="row-lbl">10月 · AI 3 + 自动化 1</div>
-    <div class="row-track"><div class="row-fill accent" style="width:100.0%"></div></div>
-    <div class="row-val">3<span class="unit">项</span></div>
-          <div class="row-lbl">用例生成覆盖</div>
-          <div class="row-track"><div class="row-fill" style="width:62%"></div></div>
-          <div class="row-val">8<span class="unit">+ 项目</span></div>
-        </div>
         <div style="display:flex;flex-direction:column;gap:1.6vh">
           <div style="border-top:2px solid var(--accent);padding-top:1.2vh">
-            <div class="t-meta" style="color:var(--accent)">并行项目数</div>
-            <div style="font-family:var(--sans);font-weight:200;font-size:min(3.6vw,6.4vh);line-height:1">2 → 4</div>
-            <div class="t-body-sm">7 月 2 个并行,9 月最多 4 个项目同时推进</div>
+            <div class="t-meta" style="color:var(--accent)">从哪来</div>
+            <p class="t-body-sm" style="line-height:1.6">我已经为自己写了一个 skill,用例 100% AI 生成。同理,不同业务线的人也会需要较为贴合自己业务线的定制 skill。</p>
           </div>
           <div style="border-top:1px solid var(--border-subtle);padding-top:1.2vh">
-            <div class="t-meta">工作方法调整</div>
-            <div style="font-family:var(--sans);font-weight:200;font-size:min(3.2vw,5.6vh);line-height:1.1">前置准备</div>
-            <div class="t-body-sm">热泵时间戳用例顺延后调整:并行项目在周初先把自动化任务、环境、账号链路准备好</div>
+            <div class="t-meta">是什么</div>
+            <p class="t-body-sm" style="line-height:1.6">一个"生成 skill 的 skill":输入某条业务线的历史用例和相关文档,自动产出那条线专属的用例生成 skill。宠物线有宠物的,热泵有热泵的。</p>
+          </div>
+          <div style="border-top:1px solid var(--border-subtle);padding-top:1.2vh">
+            <div class="t-meta">解决什么</div>
+            <p class="t-body-sm" style="line-height:1.6">每条业务线的用例各有习惯,每人都能有一版贴合自己的,不用都从通用做法开始改。</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1vh;padding:2.4vh 1.6vw;border-left:2px solid var(--accent);padding-left:1.8vw">
+          <div class="t-meta" style="color:var(--accent)">进度</div>
+          <div style="font-weight:200;font-size:min(2.8vw,4.6vh);line-height:1.1">技术方案设计</div>
+          <div class="t-body-sm" style="line-height:1.55">下阶段启动,先在我们家电线做验证。</div>
+        </div>
+      </div>
+      <div data-anim="line" class="t-meta" style="color:var(--text-helper)">路径:先把自己这条线跑通 → 抽成通用生成流程 → 组内试用</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S19" data-animate="four-cards">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · NEXT</div><div class="r">SS · 26.11 · 14 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.6vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">05 · 不足与下一步 / 目标</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">下阶段四件事,都能验收</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.6vw;align-content:start">
+        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:2px solid var(--accent)">
+          <div class="t-meta" style="color:var(--accent)">01 · 配合开发做自动化</div>
+          <div style="font-weight:400;font-size:max(18px,1.6vw);line-height:1.2">用例可自动化、断言写清楚</div>
+          <p class="t-body-sm" style="line-height:1.55">出可自动化的用例,把断言和前置条件标清楚;执行在开发侧,测试侧负责用例与结果核验。</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
+          <div class="t-meta">02 · 元 skill</div>
+          <div style="font-weight:400;font-size:max(18px,1.6vw);line-height:1.2">业务线专属 skill</div>
+          <p class="t-body-sm" style="line-height:1.55">在家电线先做验证,产出可复制的生成流程;同步把 req-to-cases 发布给组内用。</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
+          <div class="t-meta">03 · 智能体测试</div>
+          <div style="font-weight:400;font-size:max(18px,1.6vw);line-height:1.2">评测口径先行</div>
+          <p class="t-body-sm" style="line-height:1.55">厨电智能体把评测口径和语料在需求阶段定下来,上线前有基线;这块目前是空白。</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
+          <div class="t-meta">04 · 数据与能力</div>
+          <div style="font-weight:400;font-size:max(18px,1.6vw);line-height:1.2">提效有数</div>
+          <p class="t-body-sm" style="line-height:1.55">用例耗时按项目记录前后对比,AI 提效有多少能量化出来。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-layout="S13" data-animate="three-forces">
+  <div class="canvas-card">
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · SUMMARY</div><div class="r">SS · 26.11 · 15 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.4vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh"><div class="t-meta">SUMMARY</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.6vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">四个月,三句话</div></div>
+      <div data-anim="up" style="display:grid;grid-template-columns:4fr 12fr;gap:2vw;min-height:0">
+        <div style="background:var(--accent);color:var(--accent-on);padding:3vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-weight:200;font-size:min(3.2vw,5.6vh);line-height:1.12;letter-spacing:-.02em">交付<br/>工具<br/>待补</div>
+          <div class="t-meta" style="color:rgba(255,255,255,.72)">2026.07 — 11</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.2vh;justify-content:center">
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:baseline;padding:1.8vh 0;border-top:1px solid var(--border-subtle)">
+            <div style="font-weight:500;font-size:max(17px,1.4vw);color:var(--accent);min-width:6em">交付</div>
+            <div class="t-body-sm" style="line-height:1.5">31 个项目、5412 条用例、25 份报告,打回延期为零;宠物线 6 个区域回归走通。</div>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:baseline;padding:1.8vh 0;border-top:1px solid var(--border-subtle)">
+            <div style="font-weight:500;font-size:max(17px,1.4vw);color:var(--accent);min-width:6em">工具</div>
+            <div class="t-body-sm" style="line-height:1.5">AI 三项 + 自动化两项,都已进入日常使用;自动化配合是下阶段要补的。</div>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:baseline;padding:1.8vh 0;border-top:1px solid var(--border-subtle)">
+            <div style="font-weight:500;font-size:max(17px,1.4vw);color:var(--accent);min-width:6em">待补</div>
+            <div class="t-body-sm" style="line-height:1.5">自动化配合经验少、测试方法待沉淀、能力面还窄——这三件是下阶段的实话。</div>
           </div>
         </div>
       </div>
@@ -1686,403 +1856,18 @@
   </div>
 </section>
 
-<section class="slide" data-layout="S19" data-animate="four-cards">
+<section class="slide accent" data-layout="SWISS-CLOSING-ASCII" data-animate="split-statement">
   <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · WORK MODES</div><div class="r">SS · 26.11 · 16 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:3vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-        <div style="width:64px;height:3px;background:var(--accent)"></div>
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">个人工作模式:四阶段演进</div>
-        <div class="t-meta">03 · 工作亮点 / 个人工作模式</div>
+    <div class="chrome-min"><div class="l">试用期述职 · Lain · CLOSING</div><div class="r">SS · 26.11 · 16 / 16</div></div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:1fr auto;gap:3vh">
+      <div data-anim="manifesto" style="display:flex;flex-direction:column;justify-content:center;gap:2vh">
+        <div class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em">THANKS</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-size:min(7.4vw,13vh);line-height:.96;letter-spacing:-.025em;font-weight:200;color:#fff">感谢<span style="font-style:italic;font-weight:300">聆听</span></div>
+        <div class="t-body" style="max-width:44ch;color:rgba(255,255,255,.84);margin-top:1.4vh">感谢大家的聆听，希望大家多多指正。</div>
       </div>
-      <div data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.6vw;align-content:start"><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-    <div class="t-meta">PHASE 01 · 7月</div>
-    <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);line-height:1.2;letter-spacing:-.015em">被动接单</div>
-    <p class="t-body-sm" style="line-height:1.55">培训结束后接手 D12+T1 收尾、TCL、小天鹅项目,任务按分配执行。</p>
-  </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-    <div class="t-meta">PHASE 02 · 8月</div>
-    <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);line-height:1.2;letter-spacing:-.015em">独立主责</div>
-    <p class="t-body-sm" style="line-height:1.55">体脂秤、猫砂盆、Matter 开关全流程独立负责;开始用 AI 辅助编写用例。</p>
-  </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-    <div class="t-meta">PHASE 03 · 9月</div>
-    <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);line-height:1.2;letter-spacing:-.015em">多线并行</div>
-    <p class="t-body-sm" style="line-height:1.55">热泵、宠物、咖啡机、厨电 4 个项目同时推进,排期与节奏自己扛。</p>
-  </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-    <div class="t-meta">PHASE 04 · 10—11月</div>
-    <div style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);line-height:1.2;letter-spacing:-.015em">前置铺排</div>
-    <p class="t-body-sm" style="line-height:1.55">准备动作前移到周初,在途项目提前设计。</p>
-  </div></div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S07" data-animate="hero">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · MONTHLY LOAD</div><div class="r">SS · 26.11 · 17 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.4vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">03 · 亮点 / MONTHLY</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">月度任务量演进:持续爬坡</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:7fr 5fr;gap:3vw;min-height:0;align-items:center">
-        <div class="h-bar-chart" style="margin-top:0">
-          <div class="row-lbl">7月月</div>
-    <div class="row-track"><div class="row-fill" style="width:71.42857142857143%"></div></div>
-    <div class="row-val">5<span class="unit">项</span></div><div class="row-lbl">8月月</div>
-    <div class="row-track"><div class="row-fill" style="width:85.71428571428571%"></div></div>
-    <div class="row-val">6<span class="unit">项</span></div><div class="row-lbl">9月月</div>
-    <div class="row-track"><div class="row-fill accent" style="width:100.0%"></div></div>
-    <div class="row-val">7<span class="unit">项</span></div><div class="row-lbl">10月月</div>
-    <div class="row-track"><div class="row-fill" style="width:71.42857142857143%"></div></div>
-    <div class="row-val">5<span class="unit">项</span></div>
-        </div>
-        <div style="display:flex;flex-direction:column;justify-content:center"><div style="display:flex;gap:1vw;align-items:baseline;padding:.9vh 0;border-top:1px solid var(--border-subtle)">
-      <div class="t-meta" style="color:var(--accent);min-width:3em">7月月</div>
-      <div class="t-body-sm" style="font-size:max(14px,.85vw)">D12+T1二轮 · TCL · 小天鹅×2 · 窗帘开关</div>
-    </div><div style="display:flex;gap:1vw;align-items:baseline;padding:.9vh 0;border-top:1px solid var(--border-subtle)">
-      <div class="t-meta" style="color:var(--accent);min-width:3em">8月月</div>
-      <div class="t-body-sm" style="font-size:max(14px,.85vw)">猫砂盆 · 体脂秤×2轮 · Matter · 宠物启动 · 小程序</div>
-    </div><div style="display:flex;gap:1vw;align-items:baseline;padding:.9vh 0;border-top:1px solid var(--border-subtle)">
-      <div class="t-meta" style="color:var(--accent);min-width:3em">9月月</div>
-      <div class="t-body-sm" style="font-size:max(14px,.85vw)">咖啡机×2 · 云菜谱×2 · 宠物×3 · 热泵×2 · 厨电 · 预览</div>
-    </div><div style="display:flex;gap:1vw;align-items:baseline;padding:.9vh 0;border-top:1px solid var(--border-subtle)">
-      <div class="t-meta" style="color:var(--accent);min-width:3em">10月月</div>
-      <div class="t-body-sm" style="font-size:max(14px,.85vw)">奥克斯 · 宠物面板×3 · BDU · 语料库建设</div>
-    </div></div>
-      </div>
-    </div>
-    <div class="t-meta" style="color:var(--text-helper)">11 月线控器一轮收尾,另有 4 个在途项目在用例设计阶段;全期月均 4.0 个项目</div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S13" data-animate="three-forces">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · TEAMWORK</div><div class="r">SS · 26.11 · 18 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.4vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">03 · 亮点 / CROSS-FUNCTION</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">跨职能配合:三个策略</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:5fr 11fr;gap:2vw;min-height:0">
-        <div style="background:var(--accent);color:var(--accent-on);padding:3vh 1.8vw;display:flex;flex-direction:column;justify-content:space-between">
-          <div class="t-cat" style="color:rgba(255,255,255,.8)">STRATEGY · 03</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.4vw,6vh);line-height:1.1;letter-spacing:-.02em">配合<br>前移</div>
-          <div class="t-meta" style="color:rgba(255,255,255,.72)">MOVE EARLIER</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.4vh;justify-content:space-between"><article class="card-fill" style="padding:2.2vh 1.6vw;display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:start">
-      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8vh);line-height:.9;color:var(--accent)">01</div>
-      <div style="display:flex;flex-direction:column;gap:1vh">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(18px,1.6vw);letter-spacing:-.01em">环境与硬件前置核对</div>
-        <p class="t-body-sm" style="line-height:1.55">定制项目 PID/面板配置/SN 码/模组封装提前核对:奥克斯 PID 反复、TCL 模组问题均在提测前推动解决,减少测试期等待。</p>
-      </div>
-    </article><article class="card-fill" style="padding:2.2vh 1.6vw;display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:start">
-      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8vh);line-height:.9;color:var(--accent)">02</div>
-      <div style="display:flex;flex-direction:column;gap:1vh">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(18px,1.6vw);letter-spacing:-.01em">需求口径表格同步</div>
-        <p class="t-body-sm" style="line-height:1.55">核对需求点与缺陷确认全部走表格同步:宠物面板一轮出入逐条核对经验,沉淀为"表格同步最重要"工作法。</p>
-      </div>
-    </article><article class="card-fill" style="padding:2.2vh 1.6vw;display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:start">
-      <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8vh);line-height:.9;color:var(--accent)">03</div>
-      <div style="display:flex;flex-direction:column;gap:1vh">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(18px,1.6vw);letter-spacing:-.01em">测试左移介入</div>
-        <p class="t-body-sm" style="line-height:1.55">需求阶段就跟进口径;基础验证做全,减少"测一半发现不能测需打回"。</p>
-      </div>
-    </article></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S20" data-animate="stacked-ledger">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · TEAMWORK DATA</div><div class="r">SS · 26.11 · 19 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:3vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">03 · 亮点 / TEAMWORK DATA</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">配合效果:数据说话</div></div>
-      <div data-anim="ledger" style="min-height:0"><div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2vw;align-items:center;padding:1.55vh 0;border-bottom:1px solid var(--border-subtle)">
-      <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.4vw,9vh);line-height:.95;letter-spacing:-.03em;font-feature-settings:'tnum'">提测前<span style="font-size:.32em;font-weight:300;opacity:.55;margin-left:.12em;vertical-align:.45em"></span></div>
-      <div class="ledger-label" style="display:flex;flex-direction:column;gap:.5vh">
-        <div class="t-h-prod" style="font-size:max(18px,1.5vw)">问题前移解决</div>
-        <div class="t-body-sm">定制项目硬件与配置问题在测试开始前清零</div>
-      </div>
-      <div class="ledger-icon" style="color:var(--accent)"><i data-lucide="check-circle" style="width:2.2vw;height:2.2vw"></i></div>
-    </div><div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2vw;align-items:center;padding:1.55vh 0;border-bottom:1px solid var(--border-subtle)">
-      <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.4vw,9vh);line-height:.95;letter-spacing:-.03em;font-feature-settings:'tnum'">表格<span style="font-size:.32em;font-weight:300;opacity:.55;margin-left:.12em;vertical-align:.45em"></span></div>
-      <div class="ledger-label" style="display:flex;flex-direction:column;gap:.5vh">
-        <div class="t-h-prod" style="font-size:max(18px,1.5vw)">口径同步留痕</div>
-        <div class="t-body-sm">核对与确认全程有记录可回溯</div>
-      </div>
-      <div class="ledger-icon" style="color:var(--accent)"><i data-lucide="table" style="width:2.2vw;height:2.2vw"></i></div>
-    </div><div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2vw;align-items:center;padding:1.55vh 0;border-bottom:1px solid var(--border-subtle)">
-      <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.4vw,9vh);line-height:.95;letter-spacing:-.03em;font-feature-settings:'tnum'">2<span style="font-size:.32em;font-weight:300;opacity:.55;margin-left:.12em;vertical-align:.45em">/2</span></div>
-      <div class="ledger-label" style="display:flex;flex-direction:column;gap:.5vh">
-        <div class="t-h-prod" style="font-size:max(18px,1.5vw)">定制项目按期交付</div>
-        <div class="t-body-sm">小天鹅双机 · 奥克斯除湿机,客户无异议</div>
-      </div>
-      <div class="ledger-icon" style="color:var(--accent)"><i data-lucide="package-check" style="width:2.2vw;height:2.2vw"></i></div>
-    </div><div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2vw;align-items:center;padding:1.55vh 0;border-bottom:1px solid var(--border-subtle)">
-      <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.4vw,9vh);line-height:.95;letter-spacing:-.03em;font-feature-settings:'tnum'">6<span style="font-size:.32em;font-weight:300;opacity:.55;margin-left:.12em;vertical-align:.45em">区</span></div>
-      <div class="ledger-label" style="display:flex;flex-direction:column;gap:.5vh">
-        <div class="t-h-prod" style="font-size:max(18px,1.5vw)">多区域回归走通</div>
-        <div class="t-body-sm">宠物线增值服务 5 区 + 面板国美区线上</div>
-      </div>
-      <div class="ledger-icon" style="color:var(--accent)"><i data-lucide="globe" style="width:2.2vw;height:2.2vw"></i></div>
-    </div><div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2vw;align-items:center;padding:1.55vh 0;border-bottom:1px solid var(--border-subtle)">
-      <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.4vw,9vh);line-height:.95;letter-spacing:-.03em;font-feature-settings:'tnum'">评审<span style="font-size:.32em;font-weight:300;opacity:.55;margin-left:.12em;vertical-align:.45em"></span></div>
-      <div class="ledger-label" style="display:flex;flex-direction:column;gap:.5vh">
-        <div class="t-h-prod" style="font-size:max(18px,1.5vw)">用例评审查漏补缺</div>
-        <div class="t-body-sm">评审时帮开发和产品补需求模糊点,如云食谱项目多个模糊需求点提前澄清</div>
-      </div>
-      <div class="ledger-icon" style="color:var(--accent)"><i data-lucide="filter" style="width:2.2vw;height:2.2vw"></i></div>
-    </div></div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S09" data-animate="statement">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · CHAPTER</div><div class="r">SS · 26.11 · 20 / 27</div></div>
-    <span class="dot-mat" style="position:absolute;right:5vw;top:12vh;width:30vw;height:30vw;color:var(--ink)"></span>
-    <span class="ring-mat lg" style="position:absolute;left:5vw;bottom:10vh;width:16vw;height:16vw;color:var(--ink)"></span>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2vh;align-content:center">
-      <div data-anim="line" class="t-meta" style="letter-spacing:.22em">FOUR / 04</div>
-      <h1 data-anim="line" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(8.4vw,14.5vh);line-height:.98;letter-spacing:-.03em">工作反思与改进</h1>
-      <div data-anim="line" class="lead" style="max-width:52ch;opacity:.8">三层反思 · 个人四问 · AI 赋能问题与解法 · 下阶段目标。</div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S05" data-animate="stack-build">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · REFLECTION</div><div class="r">SS · 26.11 · 21 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">04 · 反思与改进 / REFLECTION</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">工作反思:三个层面</div></div>
-      <div class="stack-row">
-        <div class="stack-block b-grey">
-          <div class="layer-nb">01 · 个人层面</div>
-          <i data-lucide="user" class="lucide"></i>
-          <div class="layer-ttl">测试工作以面板与<br>设备端为主</div>
-          <div class="layer-desc">大部分工作围绕面板和设备端展开,人工验证占比高,不方便大面积自动化;AI 主要用于用例生成环节,执行环节的 AI 介入空间有限。</div>
-          <div class="layer-tag">客观约束</div>
-        </div>
-        <div class="stack-block b-accent">
-          <div class="layer-nb">02 · 技能层面</div>
-          <i data-lucide="cpu" class="lucide"></i>
-          <div class="layer-ttl">自动化占比低<br>标准不可度量</div>
-          <div class="layer-desc">自动化预设不足(热泵时间戳用例顺延);Zigbee 协议还没接触过;AI 提效的工时数据没有系统记录。</div>
-          <div class="layer-tag">MEASURABILITY</div>
-        </div>
-        <div class="stack-block b-ink">
-          <div class="layer-nb">03 · 业务线层面</div>
-          <i data-lucide="users" class="lucide"></i>
-          <div class="layer-ttl">经验沉淀片面<br>缺少对上输出</div>
-          <div class="layer-desc">多区回归、定制排坑经验停留在个人层面;对业务线的文档输出、横向影响力尚未建立;质量仍压在测试环节本身。</div>
-          <div class="layer-tag">OUTPUT GAP</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide split" data-layout="S03" data-animate="statement">
-  <div class="canvas-card">
-    <div class="split-half">
-      <div class="half b-grey">
-        <div class="chrome-min"><div class="l">试用期述职 · Lain</div><div class="r">22 / 27</div></div>
-        <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:2vh">
-          <div class="t-meta">SELF ASKING · 自省四问</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(6vw,10.5vh);line-height:1.04;letter-spacing:-.03em">个人<br><span style="font-style:italic;font-weight:300">四问</span></div>
-          <p class="t-body-sm" style="max-width:30ch">四个自省问题,答案对应后面的举措。</p>
-        </div>
-        <div class="t-meta" style="color:var(--text-helper)">WHAT HAVE I GIVEN</div>
-      </div>
-      <div class="half r-border">
-        <div class="chrome-min"><div class="l">QUESTIONS</div><div class="r">04</div></div>
-        <ul style="list-style:none;flex:1;display:flex;flex-direction:column;justify-content:center;margin:0;padding:0;gap:1vh">
-          <li style="display:grid;grid-template-columns:auto 1fr;gap:1.4vw;padding:1.8vh 0;border-top:1px solid var(--border-subtle)">
-            <span style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.6vh);line-height:.9;color:var(--accent)">Q1</span>
-            <span style="display:flex;flex-direction:column;gap:.6vh">
-              <span style="font-weight:500;font-size:max(16px,1.3vw)">我能给团队带来什么沉淀?</span>
-              <span class="t-body-sm">项目细节和工具经验都在 WIKI,组里随时能查。</span>
-            </span>
-          </li>
-          <li style="display:grid;grid-template-columns:auto 1fr;gap:1.4vw;padding:1.8vh 0;border-top:1px solid var(--border-subtle)">
-            <span style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.6vh);line-height:.9;color:var(--accent)">Q2</span>
-            <span style="display:flex;flex-direction:column;gap:.6vh">
-              <span style="font-weight:500;font-size:max(16px,1.3vw)">如何为协测线减负?</span>
-              <span class="t-body-sm">整理高频用例模板和定制项目自检清单,协测的同事可以直接拿来用。</span>
-            </span>
-          </li>
-          <li style="display:grid;grid-template-columns:auto 1fr;gap:1.4vw;padding:1.8vh 0;border-top:1px solid var(--border-subtle)">
-            <span style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.6vh);line-height:.9;color:var(--accent)">Q3</span>
-            <span style="display:flex;flex-direction:column;gap:.6vh">
-              <span style="font-weight:500;font-size:max(16px,1.3vw)">家电经验如何输出给其他线?</span>
-              <span class="t-body-sm">写两篇文档:多区回归的实际操作、定制项目遇到的问题,给组里参考。</span>
-            </span>
-          </li>
-          <li style="display:grid;grid-template-columns:auto 1fr;gap:1.4vw;padding:1.8vh 0;border-top:1px solid var(--border-subtle)">
-            <span style="font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.6vh);line-height:.9;color:var(--accent)">Q4</span>
-            <span style="display:flex;flex-direction:column;gap:.6vh">
-              <span style="font-weight:500;font-size:max(16px,1.3vw)">测试之外,我还能做什么?</span>
-              <span class="t-body-sm">规划中的元 skill:根据历史用例和业务文档,为每条业务线生成专属的用例生成 skill,让每个人都能定制最适合自己的。</span>
-            </span>
-          </li>
-        </ul>
-        <div class="t-meta" style="color:var(--text-helper);text-align:right">→ 对应举措见后续页</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S16" data-animate="field-notes">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · MY ACTIONS</div><div class="r">SS · 26.11 · 23 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.4vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">04 · 反思与改进 / ACTIONS</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">个人举措 · 措施</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:1.4vh 1.2vw;min-height:0"><div class="card-fill" style="padding:2.2vh 1.4vw;display:flex;flex-direction:column;justify-content:space-between;min-height:0">
-      <div class="t-h-prod" style="font-size:max(17px,1.3vw)">AI 用例生成持续优化</div>
-      <div class="t-body-sm" style="max-width:26ch">已 100% AI 生成用例;继续打磨提示词与模板,保持效率优势</div>
-    </div><div class="card-fill" style="padding:2.2vh 1.4vw;display:flex;flex-direction:column;justify-content:space-between;min-height:0">
-      <div class="t-h-prod" style="font-size:max(17px,1.3vw)">自动化任务前置</div>
-      <div class="t-body-sm" style="max-width:26ch">长等待场景(时间戳/老化)周初预设,不再被动等窗口</div>
-    </div><div class="card-fill" style="padding:2.2vh 1.4vw;display:flex;flex-direction:column;justify-content:space-between;min-height:0">
-      <div class="t-h-prod" style="font-size:max(17px,1.3vw)">WIKI 持续沉淀</div>
-      <div class="t-body-sm" style="max-width:26ch">项目细节与工具经验继续写入,回归手册补全</div>
-    </div><div class="card-fill" style="padding:2.2vh 1.4vw;display:flex;flex-direction:column;justify-content:space-between;min-height:0">
-      <div class="t-h-prod" style="font-size:max(17px,1.3vw)">协议补齐 Zigbee</div>
-      <div class="t-body-sm" style="max-width:26ch">从 3 条协议线扩到 4 条,具备简单协议问题独立排查力</div>
-    </div><div class="card-fill" style="padding:2.2vh 1.4vw;display:flex;flex-direction:column;justify-content:space-between;min-height:0">
-      <div class="t-h-prod" style="font-size:max(17px,1.3vw)">req-to-cases 发布</div>
-      <div class="t-body-sm" style="max-width:26ch">发布 ferry 供组内复用,颗粒度问题已解决</div>
-    </div><div class="card-fill" style="padding:2.2vh 1.4vw;display:flex;flex-direction:column;justify-content:space-between;min-height:0">
-      <div class="t-h-prod" style="font-size:max(17px,1.3vw)">元 skill 方案设计</div>
-      <div class="t-body-sm" style="max-width:26ch">业务线专属用例生成的技术方案与验证计划</div>
-    </div></div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S08" data-animate="duo-mirror">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · AI PROBLEMS</div><div class="r">SS · 26.11 · 24 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">04 · 反思与改进 / AI GAPS</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">AI 用例生成现状</div></div>
-      <div class="duo-compare" style="margin-top:2vh">
-        <div class="col">
-          <div class="col-tag"><span class="num">01</span>现状</div>
-          <div class="col-ttl">skill 完成后<br>100% AI 生成</div>
-          <ul class="col-list">
-            <li>req-to-cases skill 完成后,用例 100% 用 AI 生成</li>
-            <li>效率高,用例编写工时大幅节省</li>
-            <li>生成的用例贴合自身需求文档,直接可用</li>
-          </ul>
-        </div>
-        <span class="vrule"></span>
-        <div class="col accent">
-          <div class="col-tag"><span class="num">02</span>待改进</div>
-          <div class="col-ttl">通用生成<br>不贴业务线</div>
-          <ul class="col-list">
-            <li>通用 AI 生成对其他业务线适配不足</li>
-            <li>各线历史用例经验没被利用</li>
-            <li>→ 元 skill:按业务线定制专属生成</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S13" data-animate="three-forces">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · AI SOLUTIONS</div><div class="r">SS · 26.11 · 25 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:2.4vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh"><div class="t-meta">04 · 反思与改进 / SOLUTIONS</div><div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em;color:var(--text-primary)">AI 赋能解决办法</div></div>
-      <div data-anim="up" style="display:grid;grid-template-columns:4fr 12fr;gap:2vw;min-height:0;overflow:hidden">
-        <div style="background:var(--accent);color:var(--accent-on);padding:3vh 1.8vw;display:flex;flex-direction:column;justify-content:space-between">
-          <div class="t-cat" style="color:rgba(255,255,255,.8)">SOLUTIONS · 03</div>
-          <div style="font-weight:200;font-size:min(3.2vw,5.6vh);line-height:1.12;letter-spacing:-.02em">元 Skill<br/>参与度<br/>工具整理</div>
-          <div class="t-meta" style="color:rgba(255,255,255,.72)">AI 用例生成 · 下一代</div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vw;align-content:center"><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:1.8vh;border-top:2px solid var(--accent)">
-      <div style="font-weight:500;font-size:max(17px,1.5vw);color:var(--accent)">AI 用例生成流程固定</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh"><li class="t-body-sm" style="line-height:1.55">· xmind 用例转 json 导入用例库的流程固定下来;</li><li class="t-body-sm" style="line-height:1.55">· 新项目用例 100% 走 AI 生成;</li><li class="t-body-sm" style="line-height:1.55">· 生成后对照需求文档快速核对一遍。</li></ul>
-    </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:1.8vh;border-top:2px solid var(--accent)">
-      <div style="font-weight:500;font-size:max(17px,1.5vw);color:var(--accent)">元 Skill(规划中)</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh"><li class="t-body-sm" style="line-height:1.55">· 背景:多人反馈测试平台 AI 用例生成不好用,通用模型不贴合各业务线;</li><li class="t-body-sm" style="line-height:1.55">· 思路:输入历史用例与业务文档,自动生成该业务线专属的用例生成 skill;</li><li class="t-body-sm" style="line-height:1.55">· 每个人都能按自己的需求定制最合适的 skill —— 一个"生成 skill 的 skill"。</li></ul>
-    </div><div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:1.8vh;border-top:1px solid var(--border-subtle)">
-      <div style="font-weight:500;font-size:max(17px,1.5vw);">工具合并整理</div>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7vh"><li class="t-body-sm" style="line-height:1.55">· req-to-cases 完成组内发布,共同使用;</li><li class="t-body-sm" style="line-height:1.55">· 串口工具、dsh 插件整理成一个入口;</li><li class="t-body-sm" style="line-height:1.55">· 配网、开关机、OTA 这类高频场景做成配置模板。</li></ul>
-    </div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" data-layout="S19" data-animate="four-cards">
-  <div class="canvas-card">
-    <div class="chrome-min"><div class="l">试用期述职 · Lain · NEXT GOALS</div><div class="r">SS · 26.11 · 26 / 27</div></div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:3vh;min-height:0">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-        <div style="width:64px;height:3px;background:var(--accent)"></div>
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.6vw,8vh);line-height:1.02;letter-spacing:-.03em">业务线目标:四条主线</div>
-        <div class="t-meta">04 · 反思与改进 / GOALS · AI 提效 / 品类负责 / 测试左移 / 数据度量</div>
-      </div>
-      <div data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.6vw;align-content:start">
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">GOAL 01 · AI 提效</div>
-          <div style="font-weight:400;font-size:max(18px,1.7vw);line-height:1.2">AI 用例生成保持 100%</div>
-          <p class="t-body-sm" style="line-height:1.55">继续省工时;<span style="color:var(--accent)">元 skill(按业务线定制专属用例生成)启动</span>,让组内都用上。</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">GOAL 02 · 品类负责</div>
-          <div style="font-weight:400;font-size:max(18px,1.7vw);line-height:1.2">宠物 + 厨电质量负责人</div>
-          <p class="t-body-sm" style="line-height:1.55">宠物线、厨电智能体由我负责到底:评审、策略、回归基线。</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta">GOAL 03 · 测试左移</div>
-          <div style="font-weight:400;font-size:max(18px,1.7vw);line-height:1.2">评审介入常态化</div>
-          <p class="t-body-sm" style="line-height:1.55">需求阶段就参与;基础验证尽量提前,减少测到一半打回的情况。</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.2vh;padding-top:2vh;border-top:1px solid var(--border-subtle)">
-          <div class="t-meta" style="color:var(--accent)">GOAL 04 · 数据度量</div>
-          <div style="font-weight:400;font-size:max(18px,1.7vw);line-height:1.2">个人度量习惯</div>
-          <p class="t-body-sm" style="line-height:1.55">耗时、覆盖率、AI 参与比例按项目记录,改进时能拿出数据对比。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide split" data-layout="SWISS-CLOSING-ASCII" data-animate="split-statement">
-  <div class="canvas-card">
-    <div class="split-half">
-      <div class="half b-accent" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between;position:relative;overflow:hidden">
-        <canvas class="ascii-bg" aria-hidden="true"></canvas>
-        <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1"><div class="l">27 / 27</div><div class="r">CLOSING</div></div>
-        <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
-          <div class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em;margin-bottom:1.6vh">THANKS</div>
-          <div style="font-family:var(--sans),var(--sans-zh);font-size:min(7.4vw,13vh);line-height:.96;letter-spacing:-.025em;font-weight:200;color:#fff">感谢<span style="font-style:italic;font-weight:300">聆听</span></div>
-        </div>
-        <div data-anim="signature" style="display:flex;justify-content:space-between;align-items:end;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh;position:relative;z-index:1">
-          <div class="t-meta" style="color:rgba(255,255,255,.62)">汇报人:Lain(周远) · 质量保障</div>
-          <div class="t-meta" style="color:rgba(255,255,255,.62)">26.11.17</div>
-        </div>
-      </div>
-      <div class="half" style="padding:5.6vh 3.6vw 6vh;justify-content:space-between">
-        <div class="chrome-min"><div class="l">TAKEAWAYS</div><div class="r">03 RULES</div></div>
-        <ul class="takeaway-list" style="list-style:none;margin:0;padding:0"><li style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.4vh 0;border-top:1px solid var(--border-subtle);">
-      <span style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--text-primary)">01</span>
-      <span style="display:flex;flex-direction:column;gap:.8vh">
-        <span style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;color:var(--text-primary)">23 个项目 · 5465 条用例</span>
-        <span style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary)">26 份测试报告归档,全程可追溯。</span>
-      </span>
-    </li><li style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.4vh 0;border-top:1px solid var(--border-subtle);">
-      <span style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--text-primary)">02</span>
-      <span style="display:flex;flex-direction:column;gap:.8vh">
-        <span style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;color:var(--text-primary)">AI 与自动化工具全部产出</span>
-        <span style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary)">已进入日常工作流,持续使用中。</span>
-      </span>
-    </li><li style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.4vh 0;border-top:1px solid var(--border-subtle);border-bottom:2px solid var(--accent)">
-      <span style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--accent)">03</span>
-      <span style="display:flex;flex-direction:column;gap:.8vh">
-        <span style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;color:var(--accent)">接下来重点:宠物 + 厨电</span>
-        <span style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary)">把多区回归、定制项目的经验整理成文档,给组里用。</span>
-      </span>
-    </li></ul>
-        <div data-anim="foot" class="t-meta" style="color:var(--text-helper);text-align:right">→ 完 · END OF REVIEW</div>
+      <div data-anim="signature" style="display:flex;justify-content:space-between;align-items:end;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh">
+        <div class="t-meta" style="color:rgba(255,255,255,.72);font-size:max(15px,1vw)">汇报人:Lain(周远) · 质量保障 · 家电测试</div>
+        <div class="t-meta" style="color:rgba(255,255,255,.6)">2026.11</div>
       </div>
     </div>
   </div>
@@ -2189,7 +1974,7 @@ function bootGL(canvasId, fsSrc){
   // 读取 CSS 变量,把 accent 颜色塞进 shader
   function readAccent(){
     const cs = getComputedStyle(document.documentElement);
-    const hex = cs.getPropertyValue('--accent').trim() || '#002FA7';
+    const hex = cs.getPropertyValue('--accent').trim() || '#FF4800';
     const m = hex.match(/^#([0-9a-f]{6})$/i);
     if(!m) return [0, 0.18, 0.65];
     const n = parseInt(m[1], 16);
